@@ -17,7 +17,7 @@ public class UIController : MonoBehaviour
     void Start()
     {
         //Inicializamos la referencia al PlayerHealthController
-        _pHReference = GameObject.Find("Alya").GetComponent<PlayerHealthController>();
+        _pHReference = GameObject.Find("Player").GetComponent<PlayerHealthController>();
     }
 
     //M�todo para actualizar la vida en la UI
@@ -43,22 +43,19 @@ public class UIController : MonoBehaviour
             //En el caso en el que la vida actual valga 2 - falta 1 corazon
             case 2:
                 healthBar.sprite = heartMid ;
-                //Cerramos el caso y salimos del Switch
+    
                 break;
             //En el caso en el que la vida actual valga 1 - faltan 2 corazones
             case 1:
                 healthBar.sprite = heartLow;
-                //Cerramos el caso y salimos del Switch
                 break;
             //En el caso en el que la vida actual valga 0 - no hay corazone
             case 0:
                 healthBar.sprite = heartEmpty;
-                //Cerramos el caso y salimos del Switch
                 break;
             //En el caso por defecto, el jugador estar� muerto - no hay corazones
             default:
                 healthBar.sprite = heartEmpty;
-                //Cerramos el caso y salimos del Switch
                 break;
         }
 

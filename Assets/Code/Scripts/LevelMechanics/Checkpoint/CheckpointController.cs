@@ -10,7 +10,7 @@ public class CheckpointController : MonoBehaviour
 
     //ref a la pos del jugador y al mismo
     public Vector3 spawnPoint;
-    private GameObject _alya;
+    private GameObject _player;
 
 
     // Start is called before the first frame update
@@ -20,7 +20,7 @@ public class CheckpointController : MonoBehaviour
         _checkpoints = GetComponentsInChildren<Checkpoint>();
 
         //pso inicial de l jugador por si no hemos guardado ningun cp
-        spawnPoint = GameObject.Find("Alya").transform.position;
+        spawnPoint = GameObject.Find("Player").transform.position;
     }
 
 

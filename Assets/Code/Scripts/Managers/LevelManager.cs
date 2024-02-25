@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class LevelManager : MonoBehaviour
 {
     //Variable de tiempo para la corrutina
     public float waitToRespawn;
@@ -16,10 +16,10 @@ public class NewBehaviourScript : MonoBehaviour
     private void Start()
     {
         //Inicializamos las refs
-        _pCReference = GameObject.Find("Alya").GetComponent<PlayerC>();
-        _cReference = GameObject.Find("CheckpointController").GetComponent<CheckpointController>();
+        _pCReference = GameObject.Find("Player").GetComponent<PlayerC>();
+        _cReference = GameObject.Find("CheckPointController").GetComponent<CheckpointController>();
         _uIReference = GameObject.Find("Canvas").GetComponent<UIController>();
-        _pHReference = GameObject.Find("Alya").GetComponent<PlayerHealthController>();
+        _pHReference = GameObject.Find("Player").GetComponent<PlayerHealthController>();
     }
 
     //RESPAWN

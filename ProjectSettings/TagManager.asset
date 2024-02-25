@@ -41,12 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: HOLA
+  - name: Back1
     uniqueID: 1941833439
     locked: 0
-  - name: SI
+  - name: Ground
+    uniqueID: 514452055
+    locked: 0
+  - name: Alya
     uniqueID: 3889220891
     locked: 0
-  - name: HOMBRE
+  - name: Front1
     uniqueID: 2938427483
     locked: 0

@@ -17,7 +17,7 @@ public class PlayerHealthController : MonoBehaviour
     private UIController _uIReference;
     private PlayerC _pCReference;
     private SpriteRenderer _sR;
-   // private LevelManager _lReference; AAAAAAAAAAAAA
+    private LevelManager _lReference;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +26,7 @@ public class PlayerHealthController : MonoBehaviour
         _uIReference = GameObject.Find("Canvas").GetComponent<UIController>();
         _pCReference = GetComponent<PlayerC>();
         _sR = GetComponent<SpriteRenderer>();
-       // _lReference = GameObject.Find("LevelManager").GetComponent<LevelManager>(); AAAAAAAAAAAAA
+       _lReference = GameObject.Find("LevelManager").GetComponent<LevelManager>();
         currentHealth = maxHealth;
     }
 
@@ -64,7 +64,7 @@ public class PlayerHealthController : MonoBehaviour
                 ////Hacemos desaparecer de momento al jugador
                 //gameObject.SetActive(false);
                 //Llamamos al m?todo del LevelManager que respawnea al jugador
-               // _lReference.RespawnPlayer(); AAAAAAAAAAAAAAAAAAA
+               _lReference.RespawnPlayer(); 
             }
             //Si recibe daño pero no muere
             else
@@ -74,7 +74,7 @@ public class PlayerHealthController : MonoBehaviour
                 //Cambiamos el color del sprite, mantenemos el RGB y ponemos la opacidad a la mitad
                 _sR.color = new Color(_sR.color.r, _sR.color.g, _sR.color.b, .5f);
                 //Ref de knockback
-               // _pCReference.Knockback(); AAAAAAAAAAAAAAAAA
+                _pCReference.Knockback(); 
             }
 
             //Actualiza la UI

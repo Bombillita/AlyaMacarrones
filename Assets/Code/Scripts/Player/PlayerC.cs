@@ -14,6 +14,9 @@ public class PlayerC : MonoBehaviour
     //Referencia para detectar el Layer de suelo
     public LayerMask whatIsGround;
     //private bool _canDoubleJump;
+    public float knockBackForce;
+    public float knockBackLength; //contador
+    private float _knockBackCounter;
 
     //componentes
     private Rigidbody2D _theRB;
@@ -31,48 +34,99 @@ public class PlayerC : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _theRB.velocity = new Vector2(Input.GetAxis("Horizontal") * moveSpeed, _theRB.velocity.y);
 
-        //Variable true siempre que el círculo físico esté en contacto con el suelo. Overlapcircle punto donde se genera, radio, layer a detectar
-       
-        _isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, .2f, whatIsGround);
+        //KNOCKBACK
+        if (_knockBackCounter <= 0)
+        {
 
-        if (Input.GetButton("Jump"))
+
+            _theRB.velocity = new Vector2(Input.GetAxis("Horizontal") * moveSpeed, _theRB.velocity.y);
+
+            //Variable true siempre que el círculo físico esté en contacto con el suelo. Overlapcircle punto donde se genera, radio, layer a detectar
+
+            _isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, .2f, whatIsGround);
+
+            if (Input.GetButton("Jump"))
             {
-            if (_isGrounded)
-            {
-                _theRB.velocity = new Vector2(_theRB.velocity.x, jumpForce);
-                //podemos activar la posibilidad de doble salto
-                //_canDoubleJump = true;
-            }
-            //si no está en el suelo
-            /* else
-            {
-                if (_canDoubleJump)
+                if (_knockBackCounter <= 0)
                 {
-                   _theRB.velocity = new Vector2(_theRB.velocity.x, jumpForce);
-                    //evitar 3 salto
-                    _canDoubleJump = false; 
+
+                    _theRB.velocity = new Vector2(Input.GetAxis("Horizontal") * moveSpeed, _theRB.velocity.y);
+
+                    //Is grounded true siempre que detecte el suelo
+                    //OverlapCircle(punto donde se genera el círculo, radio del círculo, layer a detectar)
+                    _isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, .2f, whatIsGround);
+
+                    if (Input.GetButtonDown("Jump"))
+                    {
+
+                        if (_isGrounded)
+                        {
+                            //El jugador salta, manteniendo su velocidad en X, y aplicamos la fuerza de salto
+                            _theRB.velocity = new Vector2(_theRB.velocity.x, jumpForce);
+                            //Una vez en el suelo, reactivamos la posibilidad de doble salto
+                            //_canDoubleJump = true;
+                        }
+                        //Si el jugador no está en el suelo
+                        /*else
+                        {
+                            //Si canDoubleJump es verdadera
+                            if (_canDoubleJump)
+                            {
+                                //El jugador salta, manteniendo su velocidad en X, y aplicamos la fuerza de salto
+                                _theRB.velocity = new Vector2(_theRB.velocity.x, jumpForce);
+                                //Hacemos que no se pueda volver a saltar de nuevo
+                                _canDoubleJump = false;
+                            }
+                        } */
+                    }
+                    //Girar el Sprite del Jugador según su dirección de movimiento(velocidad)
+                    if (_theRB.velocity.x < 0)
+                    {
+
+                        _theSR.flipX = false;
+                    }
+                    //dcha
+                    else if (_theRB.velocity.x > 0)
+                    {
+
+                        _theSR.flipX = true;
+                    }
                 }
-            }*/
-        }
+                //Contador ed knockback aun no esta vacio
+                else
+                {
+                    //Detener el contador en 1 cada sec
+                    _knockBackCounter -= Time.deltaTime;
+                    //Si el jugador mira a la izquierda
+                    if (!_theSR.flipX)
+                        //Empuje a dhca
+                        _theRB.velocity = new Vector2(knockBackForce, _theRB.velocity.y);
+                    //Si el jugador mira a la derecha
+                    else
+                        //Empuje izda
+                        _theRB.velocity = new Vector2(-knockBackForce, _theRB.velocity.y);
+                }
+            }
 
 
-        //Girar el sprite dle jugador según su dirección
-        //IZquierda
-        if (_theRB.velocity.x < 0)
-        {
-            _theSR.flipX = false;
-        }
-        //Derecha
-        else if (_theRB.velocity.x > 0)
-        {
-            _theSR.flipX = true;
+            //ANIMACIONES
+            _anim.SetFloat("moveSpeed", Mathf.Abs(_theRB.velocity.x));
+            //Mathf.Abs hace que un valor negativo sea positivo, lo que nos permite que al movernos a la izquierda también se anime esta acción
+            _anim.SetBool("isGrounded", _isGrounded);
         }
 
-        //ANIMACIONES
-        _anim.SetFloat("moveSpeed", Mathf.Abs(_theRB.velocity.x));
-        //Mathf.Abs hace que un valor negativo sea positivo, lo que nos permite que al movernos a la izquierda también se anime esta acción
-        _anim.SetBool("isGrounded", _isGrounded);
+        
+    }
+
+    //Método de knockback
+    public void Knockback()
+    {
+        //Inicializamos el contador de KnockBack
+        _knockBackCounter = knockBackLength;
+        //Paralizamos al jugador en X y hacemos que salte en Y
+        _theRB.velocity = new Vector2(0f, knockBackForce);
+        //Cambiamos el valor del parámetro del Animator "hurt"
+        _anim.SetTrigger("hurt");
     }
 }
