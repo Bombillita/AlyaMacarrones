@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b57e21c1ed90b4945aa28683ddb097a0
+guid: 435aa468a2fc072499342eebde30d62d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: alyapenegrand2_0
+      name: ALYAANIMACIONES_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 5
-        width: 397
-        height: 746
+        x: 28
+        y: 565
+        width: 268
+        height: 506
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ae9690aa4c512140951c92e04d8ea36
-      internalID: 573557514
+      spriteID: b085679f8065e6141b9f7fe351f9d037
+      internalID: 186378103
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: alyapenegrand2_1
+      name: ALYAANIMACIONES_1
       rect:
         serializedVersion: 2
-        x: 475
-        y: 1
-        width: 397
-        height: 746
+        x: 330
+        y: 567
+        width: 268
+        height: 506
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0785fd5c7e8653944844b83418c9a185
-      internalID: 1941850018
+      spriteID: ab289707c0329cc44873f066f1cb6e0e
+      internalID: -1778602651
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: alyapenegrand2_2
+      name: ALYAANIMACIONES_2
       rect:
         serializedVersion: 2
-        x: 979
-        y: 9
-        width: 397
-        height: 746
+        x: 22
+        y: 20
+        width: 268
+        height: 506
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59bc7b19077e5fe40885bf1e93996712
-      internalID: 2064369584
+      spriteID: 6f91dadc3d9e89542ae54187485104ad
+      internalID: -189982485
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: alyapenegrand2_3
+      name: ALYAANIMACIONES_3
       rect:
         serializedVersion: 2
-        x: 1491
-        y: 10
-        width: 397
-        height: 746
+        x: 331
+        y: 20
+        width: 268
+        height: 506
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,8 +187,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9bff600a184aca54c9e9ff5bd7ff15b1
-      internalID: 699597717
+      spriteID: 9b45c46dc2285e642a3d9d8ad2e0220b
+      internalID: 1530304902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALYAANIMACIONES_4
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 20
+        width: 268
+        height: 506
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd252da070e0c624d8a1bfbc369d71ab
+      internalID: -823323822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALYAANIMACIONES_5
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 17
+        width: 268
+        height: 506
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 373f961802e7af74a823392b08b8ece3
+      internalID: 556479757
       vertices: []
       indices: 
       edges: []
@@ -204,10 +246,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      alyapenegrand2_0: 573557514
-      alyapenegrand2_1: 1941850018
-      alyapenegrand2_2: 2064369584
-      alyapenegrand2_3: 699597717
+      ALYAANIMACIONES_0: 186378103
+      ALYAANIMACIONES_1: -1778602651
+      ALYAANIMACIONES_2: -189982485
+      ALYAANIMACIONES_3: 1530304902
+      ALYAANIMACIONES_4: -823323822
+      ALYAANIMACIONES_5: 556479757
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

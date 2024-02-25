@@ -34,24 +34,29 @@ public class PlayerC : MonoBehaviour
         _theRB.velocity = new Vector2(Input.GetAxis("Horizontal") * moveSpeed, _theRB.velocity.y);
 
         //Variable true siempre que el círculo físico esté en contacto con el suelo. Overlapcircle punto donde se genera, radio, layer a detectar
+       
         _isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, .2f, whatIsGround);
 
-        if (_isGrounded)
-        {
-            _theRB.velocity = new Vector2(_theRB.velocity.x, jumpForce);
-            //podemos activar la posibilidad de doble salto
-            _canDoubleJump = true;
-        }
-        //si no está en el suelo
-        else
-        {
-            if (_canDoubleJump)
+        if (Input.GetButton("Jump"))
+            {
+            if (_isGrounded)
             {
                 _theRB.velocity = new Vector2(_theRB.velocity.x, jumpForce);
-                //evitar 3 salto
-                _canDoubleJump = false;
+                //podemos activar la posibilidad de doble salto
+                _canDoubleJump = true;
             }
+            //si no está en el suelo
+            /* else
+            {
+                if (_canDoubleJump)
+                {
+                   _theRB.velocity = new Vector2(_theRB.velocity.x, jumpForce);
+                    //evitar 3 salto
+                    _canDoubleJump = false; 
+                }
+            }*/
         }
+
 
         //Girar el sprite dle jugador según su dirección
         //IZquierda
