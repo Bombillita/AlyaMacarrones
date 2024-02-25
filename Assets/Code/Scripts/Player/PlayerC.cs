@@ -13,7 +13,7 @@ public class PlayerC : MonoBehaviour
     public Transform groundCheckPoint;
     //Referencia para detectar el Layer de suelo
     public LayerMask whatIsGround;
-    private bool _canDoubleJump;
+    //private bool _canDoubleJump;
 
     //componentes
     private Rigidbody2D _theRB;
@@ -43,7 +43,7 @@ public class PlayerC : MonoBehaviour
             {
                 _theRB.velocity = new Vector2(_theRB.velocity.x, jumpForce);
                 //podemos activar la posibilidad de doble salto
-                _canDoubleJump = true;
+                //_canDoubleJump = true;
             }
             //si no está en el suelo
             /* else

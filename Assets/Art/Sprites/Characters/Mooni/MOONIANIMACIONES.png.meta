@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MOONIANIMACIONES_0
+      name: moonianimaciones_0
       rect:
         serializedVersion: 2
-        x: 96
-        y: 529
-        width: 390
-        height: 527
+        x: 13
+        y: 0
+        width: 848
+        height: 1040
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cab0b0faadacb8742a08a9625b14ef95
-      internalID: 1311108009
+      spriteID: ccf38c7faee4259469763b812af0c8b3
+      internalID: -213243094
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MOONIANIMACIONES_1
+      name: moonianimaciones_1
       rect:
         serializedVersion: 2
-        x: 584
-        y: 529
-        width: 390
-        height: 527
+        x: 13
+        y: 1091
+        width: 848
+        height: 1019
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,8 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a749fa285b7e37e46aca11edd8d73679
-      internalID: 1130693332
+      spriteID: edc924c98b2e95b49993d6c33ce854f4
+      internalID: -194333648
       vertices: []
       indices: 
       edges: []
@@ -162,8 +162,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      MOONIANIMACIONES_0: 1311108009
-      MOONIANIMACIONES_1: 1130693332
+      moonianimaciones_0: -213243094
+      moonianimaciones_1: 1578662073
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
