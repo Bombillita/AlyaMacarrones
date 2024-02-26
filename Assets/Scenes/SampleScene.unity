@@ -819,8 +819,8 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 514452055
-  m_SortingLayer: 2
+  m_SortingLayerID: 1941833439
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.54499996, y: 0.54499996, z: 0}
@@ -2145,6 +2145,14 @@ PrefabInstance:
     - target: {fileID: 3529085575424201795, guid: 766416cfd34298f43b48c96bf2399be4, type: 3}
       propertyPath: m_Name
       value: Checkpoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 6994666305308517599, guid: 766416cfd34298f43b48c96bf2399be4, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6994666305308517599, guid: 766416cfd34298f43b48c96bf2399be4, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 514452055
       objectReference: {fileID: 0}
     - target: {fileID: 8276905085941874802, guid: 766416cfd34298f43b48c96bf2399be4, type: 3}
       propertyPath: m_LocalPosition.x
