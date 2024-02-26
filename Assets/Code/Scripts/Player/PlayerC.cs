@@ -39,8 +39,19 @@ public class PlayerC : MonoBehaviour
         if (_knockBackCounter <= 0)
         {
 
-
             _theRB.velocity = new Vector2(Input.GetAxis("Horizontal") * moveSpeed, _theRB.velocity.y);
+
+            if (_theRB.velocity.x < 0)
+            {
+
+                _theSR.flipX = false;
+            }
+            //dcha
+            else if (_theRB.velocity.x > 0)
+            {
+
+                _theSR.flipX = true;
+            }
 
             //Variable true siempre que el círculo físico esté en contacto con el suelo. Overlapcircle punto donde se genera, radio, layer a detectar
 
@@ -81,17 +92,7 @@ public class PlayerC : MonoBehaviour
                         } */
                     }
                     //Girar el Sprite del Jugador según su dirección de movimiento(velocidad)
-                    if (_theRB.velocity.x < 0)
-                    {
-
-                        _theSR.flipX = false;
-                    }
-                    //dcha
-                    else if (_theRB.velocity.x > 0)
-                    {
-
-                        _theSR.flipX = true;
-                    }
+                   
                 }
                 //Contador ed knockback aun no esta vacio
                 else
