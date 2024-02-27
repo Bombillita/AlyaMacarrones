@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class PlayerDamage : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    //si el jugador se mete dentro de un trigger
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-    }
+        if (collision.CompareTag("Player"))
+        {
+            Debug.Log("Tevacae");
+            //método que hace daño
+            collision.GetComponent<PlayerHealthController>().DealWithDamage();
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

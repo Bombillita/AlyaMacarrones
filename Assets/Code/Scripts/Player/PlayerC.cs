@@ -39,6 +39,7 @@ public class PlayerC : MonoBehaviour
         if (_knockBackCounter <= 0)
         {
 
+            //FLIP DLE SPRITE y movimiento
             _theRB.velocity = new Vector2(Input.GetAxis("Horizontal") * moveSpeed, _theRB.velocity.y);
 
             if (_theRB.velocity.x < 0)
@@ -59,18 +60,7 @@ public class PlayerC : MonoBehaviour
 
             if (Input.GetButton("Jump"))
             {
-                if (_knockBackCounter <= 0)
-                {
-
-                    _theRB.velocity = new Vector2(Input.GetAxis("Horizontal") * moveSpeed, _theRB.velocity.y);
-
-                    //Is grounded true siempre que detecte el suelo
-                    //OverlapCircle(punto donde se genera el círculo, radio del círculo, layer a detectar)
-                    _isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, .2f, whatIsGround);
-
-                    if (Input.GetButtonDown("Jump"))
-                    {
-
+               
                         if (_isGrounded)
                         {
                             //El jugador salta, manteniendo su velocidad en X, y aplicamos la fuerza de salto
@@ -90,10 +80,10 @@ public class PlayerC : MonoBehaviour
                                 _canDoubleJump = false;
                             }
                         } */
-                    }
-                    //Girar el Sprite del Jugador según su dirección de movimiento(velocidad)
+            }
                    
-                }
+                   
+        }
                 //Contador ed knockback aun no esta vacio
                 else
                 {
@@ -108,14 +98,14 @@ public class PlayerC : MonoBehaviour
                         //Empuje izda
                         _theRB.velocity = new Vector2(-knockBackForce, _theRB.velocity.y);
                 }
-            }
+            
 
 
             //ANIMACIONES
             _anim.SetFloat("moveSpeed", Mathf.Abs(_theRB.velocity.x));
             //Mathf.Abs hace que un valor negativo sea positivo, lo que nos permite que al movernos a la izquierda también se anime esta acción
             _anim.SetBool("isGrounded", _isGrounded);
-        }
+        
 
         
     }
