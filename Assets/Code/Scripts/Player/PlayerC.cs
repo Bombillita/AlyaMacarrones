@@ -17,6 +17,7 @@ public class PlayerC : MonoBehaviour
     public float knockBackForce;
     public float knockBackLength; //contador
     private float _knockBackCounter;
+    public float runMode;
 
     //componentes
     private Rigidbody2D _theRB;
@@ -41,6 +42,15 @@ public class PlayerC : MonoBehaviour
 
             //FLIP DLE SPRITE y movimiento
             _theRB.velocity = new Vector2(Input.GetAxis("Horizontal") * moveSpeed, _theRB.velocity.y);
+
+            //CORRER
+
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                _theRB.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * moveSpeed * runMode, _theRB.velocity.y);
+
+            }
+            else _theRB.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * moveSpeed, _theRB.velocity.y);
 
             if (_theRB.velocity.x < 0)
             {

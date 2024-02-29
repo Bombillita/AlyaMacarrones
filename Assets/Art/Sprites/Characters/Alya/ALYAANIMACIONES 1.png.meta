@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 435aa468a2fc072499342eebde30d62d
+guid: ababb4fc654206a4cb6a826dd46cff09
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ALYAANIMACIONES_0
+      name: ALYAANIMACIONES 1_0
       rect:
         serializedVersion: 2
-        x: 28
-        y: 565
-        width: 268
-        height: 506
+        x: 190
+        y: 1169
+        width: 512
+        height: 962
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b085679f8065e6141b9f7fe351f9d037
-      internalID: 186378103
+      spriteID: f6a5c2b687b1162448ff1400d334160d
+      internalID: 775884386
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ALYAANIMACIONES_1
+      name: ALYAANIMACIONES 1_1
       rect:
         serializedVersion: 2
-        x: 330
-        y: 567
-        width: 268
-        height: 506
+        x: 797
+        y: 1161
+        width: 512
+        height: 962
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab289707c0329cc44873f066f1cb6e0e
-      internalID: -1778602651
+      spriteID: 92daa3e85cc1fb548b59d72496072030
+      internalID: -1487116831
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ALYAANIMACIONES_2
+      name: ALYAANIMACIONES 1_2
       rect:
         serializedVersion: 2
-        x: 22
-        y: 20
-        width: 268
-        height: 506
+        x: 1494
+        y: 1169
+        width: 512
+        height: 962
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f91dadc3d9e89542ae54187485104ad
-      internalID: -189982485
+      spriteID: a939cdeee03274d49a9e7fa31f8e3d83
+      internalID: 323827888
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ALYAANIMACIONES_3
+      name: ALYAANIMACIONES 1_3
       rect:
         serializedVersion: 2
-        x: 331
-        y: 20
-        width: 268
-        height: 506
+        x: 2187
+        y: 1161
+        width: 512
+        height: 962
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b45c46dc2285e642a3d9d8ad2e0220b
-      internalID: 1530304902
+      spriteID: d87f45dc9008d534192ea8a1588f5c48
+      internalID: -1634653704
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ALYAANIMACIONES_4
+      name: ALYAANIMACIONES 1_4
       rect:
         serializedVersion: 2
-        x: 664
-        y: 20
-        width: 268
-        height: 506
+        x: 2899
+        y: 1169
+        width: 512
+        height: 962
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd252da070e0c624d8a1bfbc369d71ab
-      internalID: -823323822
+      spriteID: 65771010180e8f0409b5b26da1cbb455
+      internalID: -235033091
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ALYAANIMACIONES_5
+      name: ALYAANIMACIONES 1_5
       rect:
         serializedVersion: 2
-        x: 1004
-        y: 17
-        width: 268
-        height: 506
+        x: 196
+        y: 110
+        width: 512
+        height: 962
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,8 +229,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 373f961802e7af74a823392b08b8ece3
-      internalID: 556479757
+      spriteID: ddbb5a299738519478da93642e8fed26
+      internalID: -1188960007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALYAANIMACIONES 1_6
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 108
+        width: 512
+        height: 962
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b9fc2598836cd74d93152150af22340
+      internalID: -1473514783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALYAANIMACIONES 1_8
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 100
+        width: 512
+        height: 962
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ac36f0b9ce8df0448c4b09dcf4ee15d
+      internalID: 1050565601
       vertices: []
       indices: 
       edges: []
@@ -246,12 +288,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ALYAANIMACIONES_0: 186378103
-      ALYAANIMACIONES_1: -1778602651
-      ALYAANIMACIONES_2: -189982485
-      ALYAANIMACIONES_3: 1530304902
-      ALYAANIMACIONES_4: -823323822
-      ALYAANIMACIONES_5: 556479757
+      ALYAANIMACIONES 1_0: 775884386
+      ALYAANIMACIONES 1_1: -1487116831
+      ALYAANIMACIONES 1_10: 2122940575
+      ALYAANIMACIONES 1_11: -869155604
+      ALYAANIMACIONES 1_2: 323827888
+      ALYAANIMACIONES 1_3: -1634653704
+      ALYAANIMACIONES 1_4: -235033091
+      ALYAANIMACIONES 1_5: -1188960007
+      ALYAANIMACIONES 1_6: -1473514783
+      ALYAANIMACIONES 1_7: 1433478532
+      ALYAANIMACIONES 1_8: 1050565601
+      ALYAANIMACIONES 1_9: -1644040127
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
