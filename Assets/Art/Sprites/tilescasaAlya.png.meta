@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 357e6c0659ea7b743bffa5da8beeedd1
-      internalID: -489942707
+      spriteID: 76228d6f21216f24fbe147b3dbf11a11
+      internalID: -1057732321
       vertices: []
       indices: 
       edges: []
@@ -145,8 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aad2757a46aec4744b3ddc9d9718f6c3
-      internalID: 1774984971
+      spriteID: 75a0e684884a33d4f9f2ca0effb31363
+      internalID: -962827065
       vertices: []
       indices: 
       edges: []
@@ -166,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74ceaa671aeda7547af43c6a80ece309
-      internalID: -1278634151
+      spriteID: ec48a893c172516428b689d562e342ff
+      internalID: -1807139770
       vertices: []
       indices: 
       edges: []
@@ -177,7 +177,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 724
-        y: 576
+        y: 575
         width: 274
         height: 492
       alignment: 0
@@ -187,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9efa626592dc658449bae7c2e4a9c7f9
-      internalID: 1001744054
+      spriteID: 256373879cbb9cb45bfcf95ffe16e370
+      internalID: 410018021
       vertices: []
       indices: 
       edges: []
@@ -198,7 +198,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1032
-        y: 576
+        y: 575
         width: 274
         height: 492
       alignment: 0
@@ -208,8 +208,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2acd187e6c53a6849872d476890a842f
-      internalID: -829229415
+      spriteID: 981a696fea8b40b4b839bbcda954a9c6
+      internalID: -1196258402
       vertices: []
       indices: 
       edges: []
@@ -229,8 +229,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4b774a08e4d0ad4ab789ca3dd912035
-      internalID: 1144094417
+      spriteID: fe1c5b3b13e6cfc4e84002ff55fd4e28
+      internalID: 1892122561
       vertices: []
       indices: 
       edges: []
@@ -250,8 +250,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba504228658cdf84aa3cf1057c33ed30
-      internalID: 1390085764
+      spriteID: 9e5d56e0bf3dbd341837d7b5fb30f00d
+      internalID: -1697161132
       vertices: []
       indices: 
       edges: []
@@ -260,9 +260,9 @@ TextureImporter:
       name: tilescasaAlya_7
       rect:
         serializedVersion: 2
-        x: 528
+        x: 527
         y: 659
-        width: 92
+        width: 94
         height: 87
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -271,8 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec30dc5020dc8fb4cb866751983e4402
-      internalID: 301984241
+      spriteID: 3b9d541609e92234d92d1525bc7c7bd9
+      internalID: -1390497979
       vertices: []
       indices: 
       edges: []
@@ -292,8 +292,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: afe04bb2b65d1564e99742d8f95aa2cf
-      internalID: -127271104
+      spriteID: 6f0265f7078debc4c9f13e98b8896bcf
+      internalID: -966185303
       vertices: []
       indices: 
       edges: []
@@ -309,15 +309,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      tilescasaAlya_0: -489942707
-      tilescasaAlya_1: 1774984971
-      tilescasaAlya_2: -1278634151
-      tilescasaAlya_3: 1001744054
-      tilescasaAlya_4: -829229415
-      tilescasaAlya_5: 1144094417
-      tilescasaAlya_6: 1390085764
-      tilescasaAlya_7: 301984241
-      tilescasaAlya_8: -127271104
+      tilescasaAlya_0: -1057732321
+      tilescasaAlya_1: -962827065
+      tilescasaAlya_2: -1807139770
+      tilescasaAlya_3: 410018021
+      tilescasaAlya_4: -1196258402
+      tilescasaAlya_5: 1892122561
+      tilescasaAlya_6: -1697161132
+      tilescasaAlya_7: -1390497979
+      tilescasaAlya_8: -966185303
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
