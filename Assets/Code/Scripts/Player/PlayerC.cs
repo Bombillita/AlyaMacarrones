@@ -17,6 +17,7 @@ public class PlayerC : MonoBehaviour
     public float knockBackForce;
     public float knockBackLength; //contador
     private float _knockBackCounter;
+    public bool lookingLeft; //donde esta mirando
     public float runMode;
 
     //componentes
@@ -56,12 +57,14 @@ public class PlayerC : MonoBehaviour
             {
 
                 _theSR.flipX = false;
+                lookingLeft = true;
             }
             //dcha
             else if (_theRB.velocity.x > 0)
             {
 
                 _theSR.flipX = true;
+                lookingLeft = false;
             }
 
             //Variable true siempre que el círculo físico esté en contacto con el suelo. Overlapcircle punto donde se genera, radio, layer a detectar
