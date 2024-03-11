@@ -1,0 +1,668 @@
+fileFormatVersion: 2
+guid: 7b2df90b8e4d7b44c8d65e8287b9a032
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ALYAANIMACIONES_0
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 4517
+        width: 536
+        height: 997
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbfa60db820413747ae994970c38c71c
+      internalID: -1287874734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALYAANIMACIONES_1
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 4520
+        width: 536
+        height: 994
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d029022d5c8b09a42b351a5a4b97d6ce
+      internalID: 1109195074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALYAANIMACIONES_2
+      rect:
+        serializedVersion: 2
+        x: 1486
+        y: 4519
+        width: 536
+        height: 995
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ed56c4e24e777c4097b7e1bfef8bc45
+      internalID: 192280644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALYAANIMACIONES_3
+      rect:
+        serializedVersion: 2
+        x: 2174
+        y: 4509
+        width: 536
+        height: 1005
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91dd38b65af73ee4ba1e9ca39c0cdf77
+      internalID: -164461178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALYAANIMACIONES_4
+      rect:
+        serializedVersion: 2
+        x: 2881
+        y: 4516
+        width: 536
+        height: 998
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f80e5797b536e824f982865bbc696219
+      internalID: 1114380208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALYAANIMACIONES_5
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 3900
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fe74bccb8a2d7342b3116e75ebaf9dc
+      internalID: 1330795761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALYAANIMACIONES_6
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 3494
+        width: 536
+        height: 1010
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b28763d22d7bb0346a16cf99bbd9f2a8
+      internalID: 837676616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALYAANIMACIONES_7
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 3489
+        width: 536
+        height: 1010
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee15e1abf4e9448438f35ec121cbd14f
+      internalID: 344280284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALYAANIMACIONES_8
+      rect:
+        serializedVersion: 2
+        x: 1413
+        y: 3490
+        width: 536
+        height: 1010
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beca258a81a510449aaf797ea71d24e4
+      internalID: -890528320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALYAANIMACIONES_9
+      rect:
+        serializedVersion: 2
+        x: 2129
+        y: 3480
+        width: 536
+        height: 1010
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1290873d8f46de14dbe012240fcf6f42
+      internalID: 1342998796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALYAANIMACIONES_10
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 2379
+        width: 536
+        height: 1010
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1b4ab38e1a39564eadf26b4fc4f7bd6
+      internalID: 1911096069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALYAANIMACIONES_11
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 2379
+        width: 536
+        height: 1010
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 753dfea770a7fe244a156d764f749e7a
+      internalID: -1604400500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALYAANIMACIONES_12
+      rect:
+        serializedVersion: 2
+        x: 1511
+        y: 2371
+        width: 536
+        height: 1010
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ad0dcabff3202449991ac0cb84ad1a0
+      internalID: -859499853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALYAANIMACIONES_13
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 1226
+        width: 536
+        height: 1010
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28926eb7e8842b046808a32e920743d2
+      internalID: -1413639501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALYAANIMACIONES_14
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 1286
+        width: 536
+        height: 1010
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22df37ca453177b4bbb8d5479b0b293b
+      internalID: 861694192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALYAANIMACIONES_15
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 1229
+        width: 536
+        height: 1010
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3ab1fd3db8556f499388f12cdbbe839
+      internalID: -1465395019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALYAANIMACIONES_16
+      rect:
+        serializedVersion: 2
+        x: 2119
+        y: 1275
+        width: 536
+        height: 1010
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d59bb6ccd0fcb324498d56b78790024d
+      internalID: -1142123256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALYAANIMACIONES_17
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 225
+        width: 708
+        height: 888
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d2b60fb299a4b540813b02f6ec3d3bd
+      internalID: 1855931188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALYAANIMACIONES_18
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 683
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7da2432caac7ce14892a9489b52d2091
+      internalID: -1907058678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALYAANIMACIONES_19
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 174
+        width: 708
+        height: 888
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 921644591adab8e49a9ef6305dc3d86d
+      internalID: -1640987396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALYAANIMACIONES_20
+      rect:
+        serializedVersion: 2
+        x: 1633
+        y: 149
+        width: 708
+        height: 888
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b550fa7dd74b4f45859cadb4b922963
+      internalID: -648884757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALYAANIMACIONES_21
+      rect:
+        serializedVersion: 2
+        x: 2444
+        y: 168
+        width: 708
+        height: 888
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd07c895b3467794ba349b0ae0a8f8c5
+      internalID: -936788722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALYAANIMACIONES_22
+      rect:
+        serializedVersion: 2
+        x: 1781
+        y: 108
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebfc771786c33e04c9e5fb0cc342c605
+      internalID: 1751745758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALYAANIMACIONES_23
+      rect:
+        serializedVersion: 2
+        x: 1966
+        y: 128
+        width: 36
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58db02357a8a16746a0ec79f4ac9ec1c
+      internalID: 527399884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ALYAANIMACIONES_0: -1287874734
+      ALYAANIMACIONES_1: 1109195074
+      ALYAANIMACIONES_10: 1911096069
+      ALYAANIMACIONES_11: -1604400500
+      ALYAANIMACIONES_12: -859499853
+      ALYAANIMACIONES_13: -1413639501
+      ALYAANIMACIONES_14: 861694192
+      ALYAANIMACIONES_15: -1465395019
+      ALYAANIMACIONES_16: -1142123256
+      ALYAANIMACIONES_17: 1855931188
+      ALYAANIMACIONES_18: -1907058678
+      ALYAANIMACIONES_19: -1640987396
+      ALYAANIMACIONES_2: 192280644
+      ALYAANIMACIONES_20: -648884757
+      ALYAANIMACIONES_21: -936788722
+      ALYAANIMACIONES_22: 1751745758
+      ALYAANIMACIONES_23: 527399884
+      ALYAANIMACIONES_3: -164461178
+      ALYAANIMACIONES_4: 1114380208
+      ALYAANIMACIONES_5: 1330795761
+      ALYAANIMACIONES_6: 837676616
+      ALYAANIMACIONES_7: 344280284
+      ALYAANIMACIONES_8: -890528320
+      ALYAANIMACIONES_9: 1342998796
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

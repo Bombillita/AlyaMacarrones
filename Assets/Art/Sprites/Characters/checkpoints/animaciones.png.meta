@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c4c90644b8a2af64fbc142aa39612634
+guid: 64b44c3f407a5bf499fa40a96f79df9b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,6 +69,19 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -110,22 +123,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: irenanimaciones_0
+      name: animaciones_0
       rect:
         serializedVersion: 2
-        x: 269
-        y: 1130
-        width: 396
-        height: 1022
+        x: 101
+        y: 1188
+        width: 716
+        height: 963
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f00f18c34eca6f42952cbd96bc49273
-      internalID: 1367006367
+      spriteID: f16b2d985184e084592ce29a8482440f
+      internalID: -1808159529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animaciones_1
+      rect:
+        serializedVersion: 2
+        x: 1027
+        y: 1188
+        width: 716
+        height: 963
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ecb063b3271b1d4fbdc87fd18af45a1
+      internalID: -870609677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animaciones_2
+      rect:
+        serializedVersion: 2
+        x: 2105
+        y: 1188
+        width: 371
+        height: 941
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d090ec946c017543804ee2816839f85
+      internalID: -1841489161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animaciones_3
+      rect:
+        serializedVersion: 2
+        x: 2734
+        y: 1188
+        width: 371
+        height: 941
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cb35b8fb8db3d847a8cf31b13570de2
+      internalID: -882432519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animaciones_4
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 81
+        width: 716
+        height: 963
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4842d0548133e24ea4c8e79e0986e67
+      internalID: 338090266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animaciones_5
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 75
+        width: 716
+        height: 963
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 521643aa14886f24aa026fe355901edc
+      internalID: 305464279
       vertices: []
       indices: 
       edges: []
@@ -141,7 +259,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      irenanimaciones_0: 1367006367
+      animaciones_0: -1808159529
+      animaciones_1: -870609677
+      animaciones_2: -1841489161
+      animaciones_3: -882432519
+      animaciones_4: 338090266
+      animaciones_5: 305464279
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
