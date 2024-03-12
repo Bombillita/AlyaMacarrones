@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 6008518214682588395}
   m_Layer: 0
   m_Name: PlayerDeathEffect
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -184,6 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1093d279acbcdec44810807812b299cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  seeLeft: 0
 --- !u!114 &6008518214682588395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,4 +197,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79d32aa65a4c13f43b3cfc4b87755399, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 1.2
+  lifeTime: 2

@@ -16,6 +16,7 @@ public class PlayerKill : MonoBehaviour
         _uIReference = GameObject.Find("Canvas").GetComponent<UIController>();
         _lMReference = GameObject.Find("LevelManager").GetComponent<LevelManager>();
 
+
     }
 
     // Update is called once per frame
@@ -26,7 +27,6 @@ public class PlayerKill : MonoBehaviour
             _pHReference.currentHealth = 0;
             _uIReference.UpdateHealthDisplay();
             _lMReference.RespawnPlayer();
-
         }
     }
 }

@@ -6,14 +6,14 @@ using UnityEngine;
 public class PlayerDeathEffect : MonoBehaviour
 {
     private SpriteRenderer _sR;
-    private bool lookingLeft;
+    public bool seeLeft;
 
     // Start is called before the first frame update
     void Start()
     {
         _sR = GetComponent<SpriteRenderer>();
 
-        if (lookingLeft == true)
+        if (seeLeft == true)
         {
             _sR.flipX = false;
         }

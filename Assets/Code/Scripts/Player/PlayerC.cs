@@ -17,8 +17,9 @@ public class PlayerC : MonoBehaviour
     public float knockBackForce;
     public float knockBackLength; //contador
     private float _knockBackCounter;
-    public bool lookingLeft; //donde esta mirando
+    public bool seeLeft; //donde esta mirando
     public float runMode;
+    private bool _isRunning;
 
     //componentes
     private Rigidbody2D _theRB;
@@ -41,7 +42,7 @@ public class PlayerC : MonoBehaviour
         if (_knockBackCounter <= 0)
         {
 
-            //FLIP DLE SPRITE y movimiento
+            //FLIP DEL SPRITE y movimiento
             _theRB.velocity = new Vector2(Input.GetAxis("Horizontal") * moveSpeed, _theRB.velocity.y);
 
             //CORRER
@@ -49,22 +50,28 @@ public class PlayerC : MonoBehaviour
             if (Input.GetKey(KeyCode.LeftShift))
             {
                 _theRB.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * moveSpeed * runMode, _theRB.velocity.y);
+                _anim.SetBool("isRunning", true);
 
             }
-            else _theRB.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * moveSpeed, _theRB.velocity.y);
+            else
+            {
+                _theRB.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * moveSpeed, _theRB.velocity.y);
+                _anim.SetBool("isRunning", false);
+            }
+
 
             if (_theRB.velocity.x < 0)
             {
 
                 _theSR.flipX = false;
-                lookingLeft = true;
+                seeLeft = true;
             }
             //dcha
             else if (_theRB.velocity.x > 0)
             {
 
                 _theSR.flipX = true;
-                lookingLeft = false;
+                seeLeft = false;
             }
 
             //Variable true siempre que el círculo físico esté en contacto con el suelo. Overlapcircle punto donde se genera, radio, layer a detectar

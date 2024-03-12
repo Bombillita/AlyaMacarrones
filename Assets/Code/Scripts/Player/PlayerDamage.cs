@@ -9,7 +9,6 @@ public class PlayerDamage : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("Tevacae");
             //método que hace daño
             collision.GetComponent<PlayerHealthController>().DealWithDamage();
         }

@@ -19,6 +19,7 @@ public class PlayerHealthController : MonoBehaviour
     private PlayerC _pCReference;
     private SpriteRenderer _sR;
     private LevelManager _lReference;
+    public GameObject deathEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -70,8 +71,13 @@ public class PlayerHealthController : MonoBehaviour
                 //audio manager, sonido de muerte
 
                 //EFECTO DE MUERTE 
-                /* GameObject instance = Instantiate(PlayerDeathEffect, transform.position, transform.rotation);
-                  instance.GetComponent<PlayerDeathEffect>().lookingLeft = GetComponent<PlayerHealthController>().lookingLeft; */
+                GameObject instance = Instantiate(deathEffect, transform.position, transform.rotation); //inicia el efecto de muerte
+                //donde mira
+                  instance.GetComponent<PlayerDeathEffect>().seeLeft = GetComponent<PlayerC>().seeLeft;
+                _lReference.RespawnPlayer();
+
+
+
             }
             //Si recibe daño pero no muere
             else
