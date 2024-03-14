@@ -10,6 +10,7 @@ public class CamController : MonoBehaviour
     public float minHeight, maxHeight; //pos. máxima y mínima
     public Transform farBackground, middleBackground; //pos. fondos
     private Vector2 _lastPos;
+   // public float minHeight2, maxHeight2; Camara vertical
 
   
     void Start()
@@ -30,6 +31,9 @@ public class CamController : MonoBehaviour
 
         //equivalente:
         transform.position = new Vector3(target.position.x, Mathf.Clamp(target.position.y, minHeight, maxHeight), transform.position.z);
+
+       //CAMARA VERTICAL
+       //transform.position = new Vector3(target.position.y, Mathf.Clamp(target.position.x, minHeight, maxHeight), transform.position.z);
 
         //conocer cuanto moverse solo en x
         // /float _amountToMoveX = transform.position.x - _lastXPos;
