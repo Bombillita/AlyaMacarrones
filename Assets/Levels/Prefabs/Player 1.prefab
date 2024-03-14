@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5988995575560806963}
   - component: {fileID: 4757392187221830082}
   - component: {fileID: 3083229277011561057}
+  - component: {fileID: 610724366666715982}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Player
@@ -79,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: -405746405
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -235033091, guid: ababb4fc654206a4cb6a826dd46cff09, type: 3}
+  m_Sprite: {fileID: 139724060, guid: 16e1b39f5ddabc24bb380c2edfb65394, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -102,7 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15fc8dc9bd8e8ba4092a364ad7f68ce3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3.8
+  moveSpeed: 5
   jumpForce: 12
   groundCheckPoint: {fileID: 1826263273152440653}
   whatIsGround:
@@ -210,7 +211,19 @@ MonoBehaviour:
   currentHealth: 0
   maxHealth: 3
   invincibleLength: 0.4
-  deathEffect: {fileID: 0}
+  deathEffect: {fileID: 231790117566501371, guid: 10fd6ee4f667ae84c947dd9f2181c8d6, type: 3}
+--- !u!114 &610724366666715982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2464035875056995609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dc4c3d11773561458ef3ea74e38dca9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8504685031637131138
 GameObject:
   m_ObjectHideFlags: 0

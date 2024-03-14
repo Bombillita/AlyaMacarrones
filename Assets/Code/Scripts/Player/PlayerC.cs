@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerC : MonoBehaviour
 {
-
+    
     public float moveSpeed;
     public float jumpForce;
     //Variable para saber si el jugador está en el suelo
@@ -25,6 +25,7 @@ public class PlayerC : MonoBehaviour
     private Rigidbody2D _theRB;
     private Animator _anim;
     private SpriteRenderer _theSR;
+
 
     // Start is called before the first frame update
     void Start()
