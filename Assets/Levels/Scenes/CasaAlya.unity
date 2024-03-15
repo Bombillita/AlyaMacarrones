@@ -791,6 +791,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &268626528 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4875397812406755154, guid: 0430f317e53f35c45bb0d96ba91e2d66, type: 3}
+  m_PrefabInstance: {fileID: 8194894053682148298}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &281762296
 GameObject:
   m_ObjectHideFlags: 0
@@ -2810,6 +2815,7 @@ GameObject:
   - component: {fileID: 490818702}
   - component: {fileID: 490818701}
   - component: {fileID: 490818705}
+  - component: {fileID: 490818706}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2921,6 +2927,20 @@ MonoBehaviour:
   heartMid: {fileID: 21300000, guid: acad7011ce2f43b4fb9eb687a43425d2, type: 3}
   heartLow: {fileID: 21300000, guid: 9cea8d01540fa3c4fb82d3e826583744, type: 3}
   heartEmpty: {fileID: 21300000, guid: 29b11750ac3d6ae4e9b5315acc51d131, type: 3}
+--- !u!114 &490818706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490818700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc55f833820821d418728488ac94d5f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeScreen: {fileID: 55135738}
+  fadeSpeed: 0
 --- !u!1 &525602354
 GameObject:
   m_ObjectHideFlags: 0
@@ -3679,6 +3699,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1893204373341537017, guid: 0430f317e53f35c45bb0d96ba91e2d66, type: 3}
   m_PrefabInstance: {fileID: 8194894053682148298}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1458000984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268626528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a40e68b27b3d33e45803888f4a8f12c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelToLoad: MainMenu
 --- !u!1 &1534733897
 GameObject:
   m_ObjectHideFlags: 0
@@ -4788,7 +4821,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4875397812406755154, guid: 0430f317e53f35c45bb0d96ba91e2d66, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1458000984}
   m_SourcePrefab: {fileID: 100100000, guid: 0430f317e53f35c45bb0d96ba91e2d66, type: 3}
 --- !u!1001 &8875649577777211899
 PrefabInstance:

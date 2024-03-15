@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
@@ -13,6 +14,10 @@ public class LevelManager : MonoBehaviour
     private UIController _uIReference;
     private PlayerHealthController _pHReference;
 
+    //metodo para salir del nivel
+    public string levelToLoad;
+    private LevelUIController _lUIController;
+
     private void Start()
     {
         //Inicializamos las refs
@@ -20,12 +25,18 @@ public class LevelManager : MonoBehaviour
         _cReference = GameObject.Find("CheckPointController").GetComponent<CheckpointController>();
         _uIReference = GameObject.Find("Canvas").GetComponent<UIController>();
         _pHReference = GameObject.Find("Player").GetComponent<PlayerHealthController>();
+        _lUIController = GameObject.Find("Canvas").GetComponent<LevelUIController>();
     }
 
     //RESPAWN
     public void RespawnPlayer()
     {
         StartCoroutine(RespawnPlayerCo());
+    }
+
+    public void ExitLevel()
+    {
+        StartCoroutine(ExitLevelCo());
     }
 
     //Corrutina
@@ -43,5 +54,16 @@ public class LevelManager : MonoBehaviour
         _pHReference.currentHealth = _pHReference.maxHealth;
         //Actualizar UI
         _uIReference.UpdateHealthDisplay();
-    } 
+    }
+
+    //Corrutina salir del nivel 
+    public IEnumerator ExitLevelCo()
+    {
+        //Fundido a negro
+        _lUIController.FadeToBlack();
+
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(levelToLoad);
+
+    }
 }

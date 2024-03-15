@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Puerta : MonoBehaviour
 {
@@ -10,12 +11,17 @@ public class Puerta : MonoBehaviour
     private LevelManager _lReference;
     private bool _canOpenDoor = false;
 
+    private void Awake()
+    {
+        _lReference = GameObject.Find("LevelManager").GetComponent<LevelManager>();
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         _sr = GetComponent<SpriteRenderer>();
         animpuerta = GetComponent<Animator>();
+        
     }
 
     void Update()
@@ -25,6 +31,7 @@ public class Puerta : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F) && _canOpenDoor == true)
         {
             animpuerta.SetTrigger("pliopen");
+            _lReference.ExitLevel();
             
         }
 
