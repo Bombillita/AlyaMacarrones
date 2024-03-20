@@ -13,7 +13,7 @@ public class LevelUIController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        FadeFromBlack(); //al inicio del nivel, lo aplica
     }
 
     // Update is called once per frame

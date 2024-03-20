@@ -10,6 +10,8 @@ public class Puerta : MonoBehaviour
     private SpriteRenderer _sr;
     private LevelManager _lReference;
     private bool _canOpenDoor = false;
+    private PlayerC _pCReference;
+    public GameObject infoPanel;
 
     private void Awake()
     {
@@ -21,7 +23,8 @@ public class Puerta : MonoBehaviour
     {
         _sr = GetComponent<SpriteRenderer>();
         animpuerta = GetComponent<Animator>();
-        
+        _pCReference = GameObject.Find("Player").GetComponent<PlayerC>();
+
     }
 
     void Update()
@@ -32,6 +35,7 @@ public class Puerta : MonoBehaviour
         {
             animpuerta.SetTrigger("pliopen");
             _lReference.ExitLevel();
+            //_pCReference. 
             
         }
 
@@ -42,6 +46,7 @@ public class Puerta : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             _canOpenDoor = true;
+            infoPanel.SetActive(true);
         }
     }
 
@@ -49,5 +54,6 @@ public class Puerta : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         _canOpenDoor = false;
+        infoPanel.SetActive(false);
     }
 }

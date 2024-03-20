@@ -20,11 +20,13 @@ public class PlayerC : MonoBehaviour
     public bool seeLeft; //donde esta mirando
     public float runMode;
     private bool _isRunning;
+    public bool canInteract = false; //PARA INTERACUTAR !!1
 
     //componentes
     private Rigidbody2D _theRB;
     private Animator _anim;
     private SpriteRenderer _theSR;
+
 
 
     // Start is called before the first frame update
