@@ -21,6 +21,7 @@ public class PlayerC : MonoBehaviour
     public float runMode;
     private bool _isRunning;
     public bool canInteract = false; //PARA INTERACUTAR !!1
+    public bool interacting = false; //estamos interactuando
 
     //componentes
     private Rigidbody2D _theRB;
@@ -89,20 +90,9 @@ public class PlayerC : MonoBehaviour
                             //El jugador salta, manteniendo su velocidad en X, y aplicamos la fuerza de salto
                             _theRB.velocity = new Vector2(_theRB.velocity.x, jumpForce);
                             //Una vez en el suelo, reactivamos la posibilidad de doble salto
-                            //_canDoubleJump = true;
+                           
                         }
-                        //Si el jugador no está en el suelo
-                        /*else
-                        {
-                            //Si canDoubleJump es verdadera
-                            if (_canDoubleJump)
-                            {
-                                //El jugador salta, manteniendo su velocidad en X, y aplicamos la fuerza de salto
-                                _theRB.velocity = new Vector2(_theRB.velocity.x, jumpForce);
-                                //Hacemos que no se pueda volver a saltar de nuevo
-                                _canDoubleJump = false;
-                            }
-                        } */
+                      
             }
                    
                    
@@ -130,6 +120,12 @@ public class PlayerC : MonoBehaviour
             _anim.SetBool("isGrounded", _isGrounded);
         
 
+        //si interactuo estoy tieso
+        if (interacting == true)
+        {
+            moveSpeed = 0;
+        }
+
         
     }
 
@@ -143,4 +139,6 @@ public class PlayerC : MonoBehaviour
         //Cambiamos el valor del parámetro del Animator "hurt"
         _anim.SetTrigger("hurt");
     }
+
+    
 }

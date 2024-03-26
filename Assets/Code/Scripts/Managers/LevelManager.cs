@@ -16,6 +16,7 @@ public class LevelManager : MonoBehaviour
 
     //metodo para salir del nivel
     public string levelToLoad;
+    public string exitobject;
     private LevelUIController _lUIController;
 
     private void Start()

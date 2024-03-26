@@ -32,6 +32,8 @@ public class Switch : MonoBehaviour
 
                 objectToSwitch.GetComponent<ObjectActivator>().isActive = true;
 
+                _pCRefernce.interacting = true;
+
             }
             else
             {

@@ -12,6 +12,7 @@ public class Puerta : MonoBehaviour
     private bool _canOpenDoor = false;
     private PlayerC _pCReference;
     public GameObject infoPanel;
+   
 
     private void Awake()
     {
@@ -35,7 +36,8 @@ public class Puerta : MonoBehaviour
         {
             animpuerta.SetTrigger("pliopen");
             _lReference.ExitLevel();
-            //_pCReference. 
+            _pCReference.interacting = true;
+           
             
         }
 
