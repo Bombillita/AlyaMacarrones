@@ -12,6 +12,8 @@ public class Puerta : MonoBehaviour
     private bool _canOpenDoor = false;
     private PlayerC _pCReference;
     public GameObject infoPanel;
+    public string levelToLoad;
+    public int n;
    
 
     private void Awake()

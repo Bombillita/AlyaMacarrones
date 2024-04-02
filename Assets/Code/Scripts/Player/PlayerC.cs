@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerC : MonoBehaviour
@@ -8,7 +9,7 @@ public class PlayerC : MonoBehaviour
     public float moveSpeed;
     public float jumpForce;
     //Variable para saber si el jugador está en el suelo
-    private bool _isGrounded;
+    public bool _isGrounded;
     //Referencia al punto por debajo del jugador que tomamos para detectar el suelo
     public Transform groundCheckPoint;
     //Referencia para detectar el Layer de suelo
@@ -27,6 +28,8 @@ public class PlayerC : MonoBehaviour
     private Rigidbody2D _theRB;
     private Animator _anim;
     private SpriteRenderer _theSR;
+
+   
 
 
 
@@ -118,15 +121,25 @@ public class PlayerC : MonoBehaviour
             _anim.SetFloat("moveSpeed", Mathf.Abs(_theRB.velocity.x));
             //Mathf.Abs hace que un valor negativo sea positivo, lo que nos permite que al movernos a la izquierda también se anime esta acción
             _anim.SetBool("isGrounded", _isGrounded);
+
+
         
 
         //si interactuo estoy tieso
         if (interacting == true)
         {
             moveSpeed = 0;
+            jumpForce = 0;
         }
 
-        
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Platform"))
+        {
+            _anim.SetBool("isGrounded", _isGrounded);
+        }
     }
 
     //Método de knockback

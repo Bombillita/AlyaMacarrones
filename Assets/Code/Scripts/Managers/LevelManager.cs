@@ -13,10 +13,8 @@ public class LevelManager : MonoBehaviour
     private CheckpointController _cReference;
     private UIController _uIReference;
     private PlayerHealthController _pHReference;
-
+    private Puerta _puertaRef, _puertaRef2, _puertaRef3;
     //metodo para salir del nivel
-    public string levelToLoad;
-    public string exitobject;
     private LevelUIController _lUIController;
 
     private void Start()
@@ -27,6 +25,10 @@ public class LevelManager : MonoBehaviour
         _uIReference = GameObject.Find("Canvas").GetComponent<UIController>();
         _pHReference = GameObject.Find("Player").GetComponent<PlayerHealthController>();
         _lUIController = GameObject.Find("Canvas").GetComponent<LevelUIController>();
+        _puertaRef = GameObject.Find("puerta").GetComponent<Puerta>();
+       /* _puertaRef2 = GameObject.Find("puerta2").GetComponent<Puerta>();
+        _puertaRef3 = GameObject.Find("puerta3").GetComponent<Puerta>();*/
+
     }
 
     //RESPAWN
@@ -64,7 +66,23 @@ public class LevelManager : MonoBehaviour
         _lUIController.FadeToBlack();
 
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene(levelToLoad);
+
+        SceneManager.LoadScene("SampleScene");
+
+      /*  if (_puertaRef.n == 0)
+        {
+            SceneManager.LoadScene(_puertaRef.levelToLoad);
+        }
+
+        if (_puertaRef2.n == 1)
+        {
+            SceneManager.LoadScene(_puertaRef2.levelToLoad);
+        }
+
+        if (_puertaRef3.n == 2)
+        {
+            SceneManager.LoadScene(_puertaRef3.levelToLoad);
+        } */
 
     }
 }

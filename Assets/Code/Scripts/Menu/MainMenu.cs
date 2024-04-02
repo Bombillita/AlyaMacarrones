@@ -40,7 +40,7 @@ public class MainMenu : MonoBehaviour
 
         if (currentPoint == 0 && Input.GetKeyDown(KeyCode.Space))
         {
-            SceneManager.LoadScene("Nexo");
+            SceneManager.LoadScene("CasaAlya");
         }
         if (currentPoint == 2 && Input.GetKeyDown(KeyCode.Space))
         {

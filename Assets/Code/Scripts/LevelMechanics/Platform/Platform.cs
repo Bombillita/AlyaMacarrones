@@ -1,58 +1,56 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Platform : MonoBehaviour
 {
-
+    //Referenciamos el collider de la plataforma
     Collider2D _platformCollider;
-    //variable que permite bajar de la plataforma si estamos sobre ella
-    bool _onplatform = false;
+    bool _onPlatform = false;
 
-    // Start is called before the first frame update
+   
     void Start()
     {
-        //inicializa el collider de la plataforma
+        //collider
         _platformCollider = GetComponent<EdgeCollider2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //si pulsamos abajo
-        if (Input.GetAxisRaw("Vertical") < -0.5f)
+        //Si pulsamos abajo y estamos sobre la plataforma
+        if (Input.GetAxisRaw("Vertical") < -0.5f && _onPlatform)
         {
-            _platformCollider.enabled = false; //ENABLE PERMITE ACTIVAR O DESACTIVAR UN COMPONENTE ESPECÍFICO DEL OBJETO. como no quiero que se desactive para siempre, corutina
+            
             StartCoroutine(ActDeactPlatformCo());
         }
-
     }
 
-    //Metodo para que si le das abajo en plataformas one way, te envie abajo
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        
-    }
-
-    //mientras un collider toque al de el objeto
+   
     private void OnCollisionStay2D(Collision2D collision)
     {
-        //en los collision no detecta comparetag, poner gameobject.
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            _onplatform = true;
-        }
-        //para saber cuadno algo ha dejado de colisionar
+        if (collision.gameObject.CompareTag("Player")) 
+            _onPlatform = true;
     }
 
+    
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+            _onPlatform = false;
+    }
+
+    //Corrutina que activa y desactiva el collider de la plataforma
     private IEnumerator ActDeactPlatformCo()
     {
-        _platformCollider.enabled = false;
-        //esperamos tiempo especfifico
+        //Desactivamos el componente collider
+        _platformCollider.enabled = false; 
         yield return new WaitForSeconds(.5f);
         _platformCollider.enabled = true;
-
     }
 
+   
 }
+
+
