@@ -23,7 +23,6 @@ public class PlayerC : MonoBehaviour
     private bool _isRunning;
     public bool canInteract = false; //PARA INTERACUTAR !!1
     public bool interacting = false; //estamos interactuando
-
     //componentes
     private Rigidbody2D _theRB;
     private Animator _anim;
@@ -132,6 +131,7 @@ public class PlayerC : MonoBehaviour
             jumpForce = 0;
         }
 
+
     }
 
     private void OnCollisionStay(Collision collision)
@@ -153,5 +153,6 @@ public class PlayerC : MonoBehaviour
         _anim.SetTrigger("hurt");
     }
 
+    
     
 }

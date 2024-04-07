@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,13 +8,14 @@ public class LevelManager : MonoBehaviour
 {
     //Variable de tiempo para la corrutina
     public float waitToRespawn;
+    public float showGameOver;
 
     //Refs
     private PlayerC _pCReference;
     private CheckpointController _cReference;
     private UIController _uIReference;
     private PlayerHealthController _pHReference;
-    private Puerta _puertaRef, _puertaRef2, _puertaRef3;
+    private Puerta _puertaRef;
     //metodo para salir del nivel
     private LevelUIController _lUIController;
 
@@ -25,9 +27,8 @@ public class LevelManager : MonoBehaviour
         _uIReference = GameObject.Find("Canvas").GetComponent<UIController>();
         _pHReference = GameObject.Find("Player").GetComponent<PlayerHealthController>();
         _lUIController = GameObject.Find("Canvas").GetComponent<LevelUIController>();
-        _puertaRef = GameObject.Find("puerta").GetComponent<Puerta>();
-       /* _puertaRef2 = GameObject.Find("puerta2").GetComponent<Puerta>();
-        _puertaRef3 = GameObject.Find("puerta3").GetComponent<Puerta>();*/
+        _puertaRef = GameObject.Find("puertamain").GetComponent<Puerta>();
+
 
     }
 
@@ -40,6 +41,11 @@ public class LevelManager : MonoBehaviour
     public void ExitLevel()
     {
         StartCoroutine(ExitLevelCo());
+    }
+
+    public void GameOver()
+    {
+        StartCoroutine (GameOverCo());
     }
 
     //Corrutina
@@ -59,6 +65,12 @@ public class LevelManager : MonoBehaviour
         _uIReference.UpdateHealthDisplay();
     }
 
+    public IEnumerator GameOverCo()
+    {
+
+        yield return new WaitForSeconds(showGameOver);
+    }
+
     //Corrutina salir del nivel 
     public IEnumerator ExitLevelCo()
     {
@@ -69,20 +81,22 @@ public class LevelManager : MonoBehaviour
 
         SceneManager.LoadScene("SampleScene");
 
-      /*  if (_puertaRef.n == 0)
+        if (_puertaRef.n == 1)
         {
             SceneManager.LoadScene(_puertaRef.levelToLoad);
         }
 
-        if (_puertaRef2.n == 1)
+        if (_puertaRef.n == 2)
         {
-            SceneManager.LoadScene(_puertaRef2.levelToLoad);
+            SceneManager.LoadScene(_puertaRef.levelToLoad);
         }
 
-        if (_puertaRef3.n == 2)
+        if (_puertaRef.n == 3)
         {
-            SceneManager.LoadScene(_puertaRef3.levelToLoad);
-        } */
+            SceneManager.LoadScene(_puertaRef.levelToLoad);
+
+
+        }
 
     }
 }

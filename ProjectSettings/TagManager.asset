@@ -13,7 +13,7 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
+  - Platform
   - 
   - 
   - 
@@ -47,6 +47,9 @@ TagManager:
     locked: 0
   - name: Ground
     uniqueID: 514452055
+    locked: 0
+  - name: Plataforma
+    uniqueID: 2461161673
     locked: 0
   - name: Alya
     uniqueID: 3889220891
