@@ -8,6 +8,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject MenuPausa;
 
     private bool _pausedGame = false;
+    public PlayerC _pCref;
 
     private void Update()
     {
@@ -28,17 +29,19 @@ public class PauseMenu : MonoBehaviour
     //metodos
     public void Pausa()
     {
+        _pCref.enabled = false;
         Time.timeScale = 0f;
         MenuPausa.SetActive(true);
         _pausedGame = true;
-
     }
 
     public void Reanudar()
     {
-        Time.timeScale = 1f;
         MenuPausa.SetActive(false);
         _pausedGame=false;
+        _pCref.enabled = true;
+        Time.timeScale = 1f;
+
     }
 
     public void Objetos()

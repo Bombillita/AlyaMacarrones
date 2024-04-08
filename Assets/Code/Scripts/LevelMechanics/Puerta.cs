@@ -12,8 +12,7 @@ public class Puerta : MonoBehaviour
     private bool _canOpenDoor = false;
     private PlayerC _pCReference;
     public GameObject infoPanel;
-    public string levelToLoad;
-    public int n;
+    public int levelToLoad;
    
 
     private void Awake()
@@ -37,7 +36,7 @@ public class Puerta : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F) && _canOpenDoor == true)
         {
             animpuerta.SetTrigger("pliopen");
-            _lReference.ExitLevel();
+            LoadLevel(levelToLoad);
             _pCReference.interacting = true;
            
             
@@ -60,5 +59,10 @@ public class Puerta : MonoBehaviour
     {
         _canOpenDoor = false;
         infoPanel.SetActive(false);
+    }
+
+    public void LoadLevel(int n)
+    {
+        StartCoroutine(_lReference.ExitLevelCo(n));
     }
 }

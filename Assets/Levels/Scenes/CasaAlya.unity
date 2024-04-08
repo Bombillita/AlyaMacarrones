@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: infopanel
       value: 
       objectReference: {fileID: 1558071890}
+    - target: {fileID: 600099502235924845, guid: 695ce34f5555fc24e9366dce43e97ef3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2681663719250896331, guid: 695ce34f5555fc24e9366dce43e97ef3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.47
@@ -2676,7 +2680,7 @@ PrefabInstance:
       objectReference: {fileID: 840791165}
     - target: {fileID: 7393314698684536224, guid: 0430f317e53f35c45bb0d96ba91e2d66, type: 3}
       propertyPath: levelToLoad
-      value: SampleScene
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2812,7 +2816,7 @@ PrefabInstance:
       objectReference: {fileID: 840791165}
     - target: {fileID: 7393314698684536224, guid: 0430f317e53f35c45bb0d96ba91e2d66, type: 3}
       propertyPath: levelToLoad
-      value: CasaAlya
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4919,6 +4923,10 @@ PrefabInstance:
       propertyPath: infopanel
       value: 
       objectReference: {fileID: 1558071890}
+    - target: {fileID: 600099502235924845, guid: 695ce34f5555fc24e9366dce43e97ef3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2681663719250896331, guid: 695ce34f5555fc24e9366dce43e97ef3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.49
@@ -5139,7 +5147,7 @@ PrefabInstance:
       objectReference: {fileID: 840791165}
     - target: {fileID: 7393314698684536224, guid: 0430f317e53f35c45bb0d96ba91e2d66, type: 3}
       propertyPath: levelToLoad
-      value: MainMenu
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
