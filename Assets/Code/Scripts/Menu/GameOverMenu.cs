@@ -9,11 +9,17 @@ public class GameOverMenu : MonoBehaviour
     private LevelUIController _uIReference;
     public float showGameOver;
     private PlayerHealthController _pHController;
+    private LevelManager _lReference;
 
     private void Start()
     {
         _uIReference = GameObject.Find("Canvas").GetComponent<LevelUIController>();
         _pHController = GameObject.Find("Player").GetComponent<PlayerHealthController>();
+    }
+
+    private void Awake()
+    {
+        _lReference = GameObject.Find("LevelManager").GetComponent<LevelManager>();
     }
 
 
@@ -44,7 +50,7 @@ public class GameOverMenu : MonoBehaviour
     //MÉTODOS
     public void Continue()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        _lReference.RespawnPlayer();
         MenuGameOver.SetActive(false);
     }
 
@@ -52,12 +58,6 @@ public class GameOverMenu : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
         MenuGameOver.SetActive(false);
-    }
-
-    public void Quit()
-    {
-        Application.Quit();
-        Debug.Log("Quitting");
     }
 
 

@@ -63,7 +63,7 @@ public class PlayerHealthController : MonoBehaviour
                 ////Hacemos desaparecer de momento al jugador
                 //gameObject.SetActive(false);
                 //Llamamos al m?todo del LevelManager que respawnea al jugador
-                _lReference.RespawnPlayer();
+                _pCReference.gameObject.SetActive(false);
 
                 //audio manager, sonido de muerte
 
@@ -71,7 +71,7 @@ public class PlayerHealthController : MonoBehaviour
                 GameObject instance = Instantiate(deathEffect, transform.position, transform.rotation); //inicia el efecto de muerte
                 //donde mira
                   instance.GetComponent<PlayerDeathEffect>().seeLeft = GetComponent<PlayerC>().seeLeft;
-                _lReference.RespawnPlayer();
+                
 
 
 
