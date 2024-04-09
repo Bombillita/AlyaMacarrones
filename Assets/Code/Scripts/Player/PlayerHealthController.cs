@@ -5,14 +5,11 @@ using UnityEngine;
 
 public class PlayerHealthController : MonoBehaviour
 {
-    //Variables vida actual jugador y el máximo que puede tener
-    //[HideInInspector] -> variable no visible en el editor de unity pero pública
+    
     [HideInInspector] public int currentHealth;
     public int maxHealth;
-
-    //tiempo de invencibilidad
-    public float invincibleLength; //para rellenar el contador
-    private float _invincibleCounter; //Contador de tiempo
+    public float invincibleLength; 
+    private float _invincibleCounter; 
 
     //Referencias
     private UIController _uIReference;
@@ -32,7 +29,7 @@ public class PlayerHealthController : MonoBehaviour
         currentHealth = maxHealth;
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         //Comprueba si el contador de invincibilidad esta vacio

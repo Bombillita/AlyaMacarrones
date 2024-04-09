@@ -36,12 +36,6 @@ public class LevelManager : MonoBehaviour
         StartCoroutine(RespawnPlayerCo());
     }
 
-
-    public void GameOver()
-    {
-        StartCoroutine (GameOverCo());
-    }
-
     //Corrutina
     private IEnumerator RespawnPlayerCo()
     {
@@ -59,11 +53,6 @@ public class LevelManager : MonoBehaviour
         _uIReference.UpdateHealthDisplay();
     }
 
-    public IEnumerator GameOverCo()
-    {
-
-        yield return new WaitForSeconds(showGameOver);
-    }
 
     //Corrutina salir del nivel 
     public IEnumerator ExitLevelCo(int scene)
