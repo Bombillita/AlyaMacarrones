@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    [SerializeField] private GameObject MenuGameOver;
     //Variable de tiempo para la corrutina
     public float waitToRespawn;
     public float showGameOver;
@@ -18,7 +17,7 @@ public class LevelManager : MonoBehaviour
     private PlayerHealthController _pHReference;
     //metodo para salir del nivel
     private LevelUIController _lUIController;
-    private GameOverMenu _GORef;
+   
 
     private void Start()
     {
@@ -35,8 +34,7 @@ public class LevelManager : MonoBehaviour
     //RESPAWN
     public void RespawnPlayer()
     {
-        StartCoroutine(RespawnPlayerCo());
-        MenuGameOver.SetActive(false);
+        StartCoroutine(RespawnPlayerCo());      
     }
 
     //Corrutina
@@ -65,6 +63,14 @@ public class LevelManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(scene);
 
+    }
+
+    public IEnumerator ExitSceneCo(int scene)
+    {
+        //Fundido a negro
+        _lUIController.FadeToBlack();
+        yield return new WaitForSeconds(0.5f);
+        SceneManager.LoadScene(scene);
 
     }
 }

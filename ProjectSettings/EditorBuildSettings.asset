@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Levels/Scenes/Ciudad.unity
     guid: a4896fb07c0538e48b30c4391277da7f
+  - enabled: 1
+    path: Assets/Levels/Scenes/Bosque1.unity
+    guid: b95fe0bb71337c344b1cbfaa54a3c557
   m_configObjects: {}

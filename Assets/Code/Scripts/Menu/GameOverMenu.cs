@@ -10,6 +10,7 @@ public class GameOverMenu : MonoBehaviour
     public float showGameOver;
     private PlayerHealthController _pHController;
     private LevelManager _lReference;
+   
 
     private void Start()
     {
@@ -29,6 +30,7 @@ public class GameOverMenu : MonoBehaviour
         {
             GameOver();
         }
+
     }
 
     //corutina
@@ -50,8 +52,8 @@ public class GameOverMenu : MonoBehaviour
     //MÉTODOS
     public void Continue()
     {
-        _lReference.RespawnPlayer();
         MenuGameOver.SetActive(false);
+        _lReference.RespawnPlayer();
     }
 
     public void Menu()

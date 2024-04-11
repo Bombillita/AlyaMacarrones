@@ -60,9 +60,7 @@ public class PlayerHealthController : MonoBehaviour
                 //Vida 0 si se queda en negativo
                 currentHealth = 0;
 
-                ////Hacemos desaparecer de momento al jugador
-                //gameObject.SetActive(false);
-                //Llamamos al m?todo del LevelManager que respawnea al jugador
+              
                 _pCReference.gameObject.SetActive(false);
 
                 //audio manager, sonido de muerte
