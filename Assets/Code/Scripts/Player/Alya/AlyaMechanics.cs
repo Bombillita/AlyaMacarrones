@@ -8,14 +8,17 @@ public class AlyaMechanics : MonoBehaviour
     //planta genreacion
     [SerializeField] private GameObject PlantaAlya;
     public Sprite offSprite, onSprite;
+    public GameObject objectToSwitch;
     private PlayerC _pCRefernce;
     public GameObject infopanel;
     private bool AlyaBaston = false;
+    private SpriteRenderer _sR;
 
     // Start is called before the first frame update
     void Start()
     {
         _pCRefernce = GameObject.Find("Player").GetComponent<PlayerC>();
+        _sR = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -25,6 +28,8 @@ public class AlyaMechanics : MonoBehaviour
         {
             PlantaAlya.SetActive(true);
             StartCoroutine(LockMovement());
+           
+            
         }
     }
 
@@ -53,6 +58,7 @@ public class AlyaMechanics : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
 
+        _sR.sprite = onSprite;
         _pCRefernce.enabled = true;
     }
 
