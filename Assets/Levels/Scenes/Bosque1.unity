@@ -4534,7 +4534,7 @@ PrefabInstance:
       objectReference: {fileID: 859192264}
     - target: {fileID: 1647285460849841120, guid: 3daffc13bb5748c4b90659f7ccb43729, type: 3}
       propertyPath: waitToRespawn
-      value: 0.5
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 2474491484768817970, guid: 3daffc13bb5748c4b90659f7ccb43729, type: 3}
       propertyPath: _pCref

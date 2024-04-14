@@ -42,6 +42,7 @@ public class LevelManager : MonoBehaviour
     {
         //Desactivamos al jugador
         _pCReference.gameObject.SetActive(false);
+        _pHReference.playerDead = false;
         //Esperamos un tiempo
         yield return new WaitForSeconds(waitToRespawn);
         //Reactivamos al jugador

@@ -24,15 +24,6 @@ public class GameOverMenu : MonoBehaviour
     }
 
 
-    private void Update()
-    {
-        if (_pHController.currentHealth == 0)
-        {
-            GameOver();
-        }
-
-    }
-
     //corutina
     public void GameOver()
     {
@@ -52,8 +43,8 @@ public class GameOverMenu : MonoBehaviour
     //MÉTODOS
     public void Continue()
     {
-        MenuGameOver.SetActive(false);
         _lReference.RespawnPlayer();
+        MenuGameOver.SetActive(false);
     }
 
     public void Menu()

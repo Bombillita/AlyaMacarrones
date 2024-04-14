@@ -17,8 +17,15 @@ public class PlayerHealthController : MonoBehaviour
     private SpriteRenderer _sR;
     private LevelManager _lReference;
     public GameObject deathEffect;
+    public bool playerDead = false;
+    private GameOverMenu _gOMenu;
 
     // Start is called before the first frame update
+
+    private void Awake()
+    {
+       _gOMenu = GameObject.Find("LevelManager").GetComponent<GameOverMenu>();
+    }
     void Start()
     {
         //Inicializamos refs
@@ -43,6 +50,7 @@ public class PlayerHealthController : MonoBehaviour
                 //Cambiamos el color del sprite, mantenemos el RGB y ponemos la opacidad a tope
                 _sR.color = new Color(_sR.color.r, _sR.color.g, _sR.color.b, 1f);
         }
+
     }
 
     //Metodo para daño
@@ -59,9 +67,13 @@ public class PlayerHealthController : MonoBehaviour
             {
                 //Vida 0 si se queda en negativo
                 currentHealth = 0;
-
-              
+                _gOMenu.GameOver();
+                playerDead = true;
                 _pCReference.gameObject.SetActive(false);
+                
+
+
+
 
                 //audio manager, sonido de muerte
 
@@ -83,6 +95,7 @@ public class PlayerHealthController : MonoBehaviour
                 _sR.color = new Color(_sR.color.r, _sR.color.g, _sR.color.b, .5f);
                 //Ref de knockback
                 _pCReference.Knockback();
+                playerDead = false;
             }
 
             //Actualiza la UI

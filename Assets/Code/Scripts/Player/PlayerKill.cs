@@ -6,17 +6,19 @@ public class PlayerKill : MonoBehaviour
 {
 
     private PlayerHealthController _pHReference;
-    private UIController _uIReference;
-    private LevelManager _lMReference;
+    private UIController _uIReference;  
+    private GameOverMenu _gOMenu;
 
     // Start is called before the first frame update
+
+    private void Awake()
+    {
+        _gOMenu = GameObject.Find("LevelManager").GetComponent<GameOverMenu>();
+    }
     void Start()
     {
         _pHReference = GameObject.Find("Player").GetComponent<PlayerHealthController>();
         _uIReference = GameObject.Find("Canvas").GetComponent<UIController>();
-        _lMReference = GameObject.Find("LevelManager").GetComponent<LevelManager>();
-
-
     }
 
     // Update is called once per frame
@@ -26,7 +28,7 @@ public class PlayerKill : MonoBehaviour
         {
             _pHReference.currentHealth = 0;
             _uIReference.UpdateHealthDisplay();
-            _lMReference.RespawnPlayer();
+            _gOMenu.GameOver();
         }
     }
 }
