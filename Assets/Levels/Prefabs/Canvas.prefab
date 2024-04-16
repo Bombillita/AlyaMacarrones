@@ -96,7 +96,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2692759927316788896
 RectTransform:
   m_ObjectHideFlags: 0
@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -564,9 +564,9 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2692759927316788896}
   - {fileID: 7337730669545964110}
   - {fileID: 6543076229541988416}
-  - {fileID: 2692759927316788896}
   - {fileID: 5303218316303776992}
   - {fileID: 3319609146579417311}
   - {fileID: 1267562970411475553}
@@ -673,7 +673,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeScreen: {fileID: 1985014507538104138}
-  fadeSpeed: 13
+  fadeSpeed: 1.5
+  shouldFadeToBlack: 0
+  shouldFadeFromBlack: 0
 --- !u!1 &7195337247463547363
 GameObject:
   m_ObjectHideFlags: 0

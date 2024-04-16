@@ -13,10 +13,12 @@ public class Puerta : MonoBehaviour
     public GameObject infoPanel;
     public int levelToLoad;
    
+   
 
     private void Awake()
     {
         _lReference = GameObject.Find("LevelManager").GetComponent<LevelManager>();
+       
     }
 
     // Start is called before the first frame update

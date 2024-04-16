@@ -582,11 +582,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &183954027 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7371412899173536172, guid: 3daffc13bb5748c4b90659f7ccb43729, type: 3}
-  m_PrefabInstance: {fileID: 5419327652955930204}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &200756866
 GameObject:
   m_ObjectHideFlags: 0
@@ -2219,20 +2214,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1342685132304506965, guid: 3daffc13bb5748c4b90659f7ccb43729, type: 3}
   m_PrefabInstance: {fileID: 5419327652955930204}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &600453840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 183954027}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8d558eafa4e1bd489fae6e7da977562, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MenuGameOver: {fileID: 859192264}
-  showGameOver: 0.5
 --- !u!4 &640543868 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5555316021827707717, guid: 4823a13acd0712d4cb1270a06ad9d0b9, type: 3}
@@ -4082,14 +4063,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1647285460849841120, guid: 3daffc13bb5748c4b90659f7ccb43729, type: 3}
-      propertyPath: MenuGameOver
-      value: 
-      objectReference: {fileID: 859192264}
-    - target: {fileID: 1647285460849841120, guid: 3daffc13bb5748c4b90659f7ccb43729, type: 3}
-      propertyPath: waitToRespawn
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 2474491484768817970, guid: 3daffc13bb5748c4b90659f7ccb43729, type: 3}
       propertyPath: _pCref
       value: 
@@ -4098,17 +4071,22 @@ PrefabInstance:
       propertyPath: MenuPausa
       value: 
       objectReference: {fileID: 1477021185}
+    - target: {fileID: 4877245622841055268, guid: 3daffc13bb5748c4b90659f7ccb43729, type: 3}
+      propertyPath: MenuGameOver
+      value: 
+      objectReference: {fileID: 859192264}
     - target: {fileID: 7371412899173536172, guid: 3daffc13bb5748c4b90659f7ccb43729, type: 3}
       propertyPath: m_Name
       value: LevelManager
       objectReference: {fileID: 0}
+    - target: {fileID: 8350409071220080326, guid: 3daffc13bb5748c4b90659f7ccb43729, type: 3}
+      propertyPath: fadeScreen
+      value: 
+      objectReference: {fileID: 6570712255575258636}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7371412899173536172, guid: 3daffc13bb5748c4b90659f7ccb43729, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 600453840}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3daffc13bb5748c4b90659f7ccb43729, type: 3}
 --- !u!1001 &5526311827369244293
 PrefabInstance:
@@ -4264,6 +4242,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdc987381177a7e49941f70a14253eeb, type: 3}
+--- !u!114 &6570712255575258636 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1985014507538104138, guid: cdc987381177a7e49941f70a14253eeb, type: 3}
+  m_PrefabInstance: {fileID: 6570712255575258635}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8538453142785767917
 PrefabInstance:
   m_ObjectHideFlags: 0

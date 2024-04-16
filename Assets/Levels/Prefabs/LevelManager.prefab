@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 1342685132304506965}
   - component: {fileID: 1647285460849841120}
   - component: {fileID: 2474491484768817970}
+  - component: {fileID: 8350409071220080326}
+  - component: {fileID: 4877245622841055268}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -45,7 +47,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44a0ba54c31b64645951108dcf61721f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitToRespawn: 2
+  waitToRespawn: 0.5
+  showGameOver: 0
 --- !u!114 &2474491484768817970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59,3 +62,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MenuPausa: {fileID: 0}
+  _pCref: {fileID: 0}
+--- !u!114 &8350409071220080326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7371412899173536172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc55f833820821d418728488ac94d5f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeScreen: {fileID: 0}
+  fadeSpeed: 3
+  shouldFadeToBlack: 0
+  shouldFadeFromBlack: 0
+--- !u!114 &4877245622841055268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7371412899173536172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8d558eafa4e1bd489fae6e7da977562, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MenuGameOver: {fileID: 0}
+  showGameOver: 0.5

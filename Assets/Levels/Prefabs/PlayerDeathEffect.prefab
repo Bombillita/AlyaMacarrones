@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5681860321014984790}
   - component: {fileID: 6742661372641435186}
   - component: {fileID: 5431479232126392879}
+  - component: {fileID: 4069523721830657829}
   m_Layer: 0
   m_Name: PlayerDeathEffect
   m_TagString: Player
@@ -184,3 +185,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   seeLeft: 0
+--- !u!114 &4069523721830657829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231790117566501371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79d32aa65a4c13f43b3cfc4b87755399, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 3
