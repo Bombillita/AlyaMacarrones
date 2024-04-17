@@ -27,6 +27,7 @@ public class PlayerC : MonoBehaviour
     private Rigidbody2D _theRB;
     private Animator _anim;
     private SpriteRenderer _theSR;
+    public Sprite PlayerSprite;
 
    
 
