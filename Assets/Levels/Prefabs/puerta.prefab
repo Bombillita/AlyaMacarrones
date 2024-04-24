@@ -167,6 +167,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animpuerta: {fileID: 142420296168315533}
+  infoPanel: {fileID: 0}
+  levelToLoad: 3
 --- !u!1 &5916908515971534431
 GameObject:
   m_ObjectHideFlags: 0

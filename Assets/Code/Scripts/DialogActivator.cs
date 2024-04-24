@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DialogActivator : MonoBehaviour
 {
-    public bool canActivate = false;
+    /*public bool canActivate = false;
     public string[] lines;
     public Sprite theNpcSprite; //img caja de dialogo hacer array como texto
 
@@ -31,5 +31,5 @@ public class DialogActivator : MonoBehaviour
         {
             canActivate = false;
         }
-    }
+    }*/
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DialogueManager : MonoBehaviour
 {
-    //pa la ui
+    /* //pa la ui
     public Text dialogText;
     public Image portrait;
     public GameObject dialogBox;
@@ -64,5 +64,5 @@ public class DialogueManager : MonoBehaviour
         currentLine = 0;
         sNpc = theSNpc;
         CheckIfName
-    }
+    }*/
 }
