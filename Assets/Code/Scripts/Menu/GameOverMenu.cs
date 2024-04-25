@@ -45,6 +45,7 @@ public class GameOverMenu : MonoBehaviour
     {
         _lReference.RespawnPlayer();
         MenuGameOver.SetActive(false);
+        _uIReference.FadeFromBlack();
     }
 
     public void Menu()
