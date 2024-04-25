@@ -29,7 +29,10 @@ public class PlayerC : MonoBehaviour
     private SpriteRenderer _theSR;
     public Sprite PlayerSprite;
 
-   
+    //instance
+    public static PlayerC instance;
+
+
 
 
 
