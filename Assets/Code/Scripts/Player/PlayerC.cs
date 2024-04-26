@@ -28,6 +28,7 @@ public class PlayerC : MonoBehaviour
     private Animator _anim;
     private SpriteRenderer _theSR;
     public Sprite PlayerSprite;
+    public bool canMove = true;
 
     //instance
     public static PlayerC instance;
@@ -47,7 +48,6 @@ public class PlayerC : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         //KNOCKBACK
         if (_knockBackCounter <= 0)
         {
@@ -133,6 +133,7 @@ public class PlayerC : MonoBehaviour
         {
             moveSpeed = 0;
             jumpForce = 0;
+            canMove = false;
         }
 
 
