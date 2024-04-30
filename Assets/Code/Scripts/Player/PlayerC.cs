@@ -133,9 +133,9 @@ public class PlayerC : MonoBehaviour
         {
             moveSpeed = 0;
             jumpForce = 0;
-            canMove = false;
         }
 
+      
 
     }
 

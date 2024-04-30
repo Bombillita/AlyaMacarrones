@@ -2,11 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjInfoScene : MonoBehaviour
+public class infopanel : MonoBehaviour
 {
-    //refs
-    public GameObject infopanel;
-    public GameObject infoObject;
+    public GameObject info;
     private PlayerC _pCRefernce;
 
     // Start is called before the first frame update
@@ -15,25 +13,11 @@ public class ObjInfoScene : MonoBehaviour
         _pCRefernce = GameObject.Find("Player").GetComponent<PlayerC>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.F) && _pCRefernce.canInteract)
-        {                
-            
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                infopanel.SetActive(false);
-                infoObject.SetActive(true);
-            }
-        }
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            infopanel.SetActive(true);
+            info.SetActive(true);
             collision.GetComponent<PlayerC>().canInteract = true;
         }
     }
@@ -42,9 +26,16 @@ public class ObjInfoScene : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            infopanel.SetActive(false);
-            infoObject.SetActive(false);
+            info.SetActive(false);
             collision.GetComponent<PlayerC>().canInteract = false;
+        }
+    }
+
+    public void Update()
+    {
+        if (_pCRefernce.interacting == true)
+        {
+            info.SetActive(false);
         }
     }
 }

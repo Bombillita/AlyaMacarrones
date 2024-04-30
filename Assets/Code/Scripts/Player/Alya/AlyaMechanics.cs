@@ -7,12 +7,15 @@ public class AlyaMechanics : MonoBehaviour
 {
     //planta genreacion
     [SerializeField] private GameObject PlantaAlya;
+    [SerializeField] private GameObject PlantaAlya2;
     public Sprite offSprite, onSprite;
     public GameObject objectToSwitch;
     private PlayerC _pCRefernce;
     public GameObject infopanel;
     private bool AlyaBaston = false;
     private SpriteRenderer _sR;
+    public bool activePlant = false;
+   
 
     // Start is called before the first frame update
     void Start()
@@ -26,11 +29,33 @@ public class AlyaMechanics : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F) && _pCRefernce.canInteract)
         {
-            PlantaAlya.SetActive(true);
-            StartCoroutine(LockMovement());
-           
+            if (activePlant == false)
+            {
+                //planta1
+                PlantaAlya.SetActive(true);
+                StartCoroutine(LockMovement());
+                activePlant = true;
+
+                //planta2
+                PlantaAlya2.SetActive(false);
+                
+            }
+
+            else 
+            {
+                //planta1
+                PlantaAlya.SetActive(false);
+                StartCoroutine(LockMovement());
+                activePlant = false;
+
+                //planta2
+                PlantaAlya2.SetActive(true);
+            }
+
+            
             
         }
+       
     }
 
     //Puede interactuar
@@ -58,7 +83,15 @@ public class AlyaMechanics : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
 
-        _sR.sprite = onSprite;
+        if (activePlant == true)
+        {
+            _sR.sprite = onSprite;
+        }
+        else
+        {
+            _sR.sprite = offSprite;
+        }
+
         _pCRefernce.enabled = true;
     }
 
