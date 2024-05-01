@@ -966,7 +966,7 @@ MonoBehaviour:
   lines:
   - n- caca
   - Que recuerdos de cuando me enfade jugando a la petanca...
-  theNpcSprite: {fileID: 0}
+  theNpcSprite: {fileID: 21300000, guid: 401cae1899e517d44b1249d0ac9a3fa9, type: 3}
   dialogueActive: 0
 --- !u!114 &315892201
 MonoBehaviour:
@@ -3005,7 +3005,7 @@ MonoBehaviour:
   lines:
   - n- a
   - Un dia decidi que seria carpintera y le hice una puerta al gato
-  theNpcSprite: {fileID: 0}
+  theNpcSprite: {fileID: 21300000, guid: 401cae1899e517d44b1249d0ac9a3fa9, type: 3}
   dialogueActive: 0
 --- !u!114 &735385701
 MonoBehaviour:
@@ -4893,6 +4893,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6526988118666867509, guid: d3423a4ef858f2f4c973f601c0b39ad4, type: 3}
+      propertyPath: PlayerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a4a5bca3344551a42aba32fc40e61962, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5132,6 +5136,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdc987381177a7e49941f70a14253eeb, type: 3}
+--- !u!1001 &7293251415676920632
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6240941884251844123, guid: f8b3d56c93f1e5a4e8982f99ffd036b0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240941884251844123, guid: f8b3d56c93f1e5a4e8982f99ffd036b0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0429
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240941884251844123, guid: f8b3d56c93f1e5a4e8982f99ffd036b0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.38501388
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240941884251844123, guid: f8b3d56c93f1e5a4e8982f99ffd036b0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240941884251844123, guid: f8b3d56c93f1e5a4e8982f99ffd036b0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240941884251844123, guid: f8b3d56c93f1e5a4e8982f99ffd036b0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240941884251844123, guid: f8b3d56c93f1e5a4e8982f99ffd036b0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240941884251844123, guid: f8b3d56c93f1e5a4e8982f99ffd036b0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240941884251844123, guid: f8b3d56c93f1e5a4e8982f99ffd036b0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240941884251844123, guid: f8b3d56c93f1e5a4e8982f99ffd036b0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7645295462770356289, guid: f8b3d56c93f1e5a4e8982f99ffd036b0, type: 3}
+      propertyPath: m_Name
+      value: Npc
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f8b3d56c93f1e5a4e8982f99ffd036b0, type: 3}
 --- !u!1001 &8194894053682148298
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5292,3 +5353,4 @@ SceneRoots:
   - {fileID: 2018582595}
   - {fileID: 471097104}
   - {fileID: 299192505}
+  - {fileID: 7293251415676920632}

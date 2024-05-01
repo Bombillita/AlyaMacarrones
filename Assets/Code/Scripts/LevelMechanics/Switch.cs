@@ -10,6 +10,7 @@ public class Switch : MonoBehaviour
     public GameObject infopanel;
     private SpriteRenderer _sR;
     private PlayerC _pCRefernce;
+    private bool _isSwitch = false;
 
     // Start is called before the first frame update
     void Start()
@@ -21,14 +22,13 @@ public class Switch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) && _pCRefernce.canInteract)
+        if (Input.GetKeyDown(KeyCode.F) && _pCRefernce.canInteract && _isSwitch == true)
         {
             //si el objeto está desactivado
             if (objectToSwitch.GetComponent<ObjectActivator>().isActive == false)
             {
                 objectToSwitch.GetComponent<ObjectActivator>().ActivateObject();
                 objectToSwitch.GetComponent<ObjectActivator>().isActive = true;
-                _pCRefernce.interacting = true;
                 _sR.sprite = upsprite;
 
             }
@@ -39,6 +39,7 @@ public class Switch : MonoBehaviour
                 _sR.sprite = downsprite;
             }
         }
+       
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -47,6 +48,7 @@ public class Switch : MonoBehaviour
         {
             infopanel.SetActive(true);
             collision.GetComponent<PlayerC>().canInteract = true;
+            _isSwitch = true;
         }
     }
 
@@ -56,6 +58,7 @@ public class Switch : MonoBehaviour
         {
             infopanel.SetActive(false);
             collision.GetComponent<PlayerC>().canInteract = false;
+            _isSwitch = false;
         }
     }
 }

@@ -9,7 +9,7 @@ public class FallingObjSpawn : MonoBehaviour
     public GameObject objectToSpawn;
     public float waitTime;
     public float spawnInterval;
-    public float lifeTime;
+    
 
 
     private void Update()
@@ -22,9 +22,7 @@ public class FallingObjSpawn : MonoBehaviour
           
             waitTime = 0f;
             Instantiate(objectToSpawn, origen.position, Quaternion.identity);
-
-            //destruir el objeto
-            Destroy(objectToSpawn, lifeTime);
+       
         }
     }
 

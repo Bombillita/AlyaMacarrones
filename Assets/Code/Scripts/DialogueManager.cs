@@ -6,29 +6,20 @@ using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
-    //La caja de texto para el diálogo
     public TextMeshProUGUI dialogText;
-    //El retrato del personaje que habla en ese momento
     public Image portrait;
-    //Referencia a la caja de diálogos
     public GameObject dialogBox;
-    //Líneas del diálogo
     public string[] dialogLines;
-    //La línea actual de diálogo
     public int currentLine;
-    //Para saber si acaba de empezar o no
     private bool justStarted;
-    //Nombre del personaje que habla en ese momento
     private string charName;
-    //El sprite del NPC
     private Sprite sNpc;
     private PlayerC _pCreference;
-
-    //Hacemos una referencia (Singleton)
     public static DialogueManager instance;
+    public bool hasinteracted = false;
+
     private void Awake()
     {
-        //Inicializamos el Singleton si está vacío
         if (instance == null) instance = this;
     }
 
@@ -41,25 +32,25 @@ public class DialogueManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Si el cuadro de diálogo está activo
+       
         if (dialogBox.activeInHierarchy)
         {
-            //Al pulsar la tecla X
             if (Input.GetKeyDown(KeyCode.Return))
             {
-                //Si el diálogo no ha empezado ahora mismo
+
                 if (!justStarted)
                 {
-                    //Vamos a la siguiente línea de diálogo
+
                     currentLine++;
 
-                    //Si se ha terminado el diálogo
+
                     if (currentLine >= dialogLines.Length)
                     {
                         //Desactivamos el cuadro de diálogo
                         dialogBox.SetActive(false);
                         //Permitimos que el jugador se mueva de nuevo
                         PlayerC.instance.canMove = true;
+                        hasinteracted = true;
 
 
                     }

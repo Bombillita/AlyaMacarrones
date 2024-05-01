@@ -7,7 +7,7 @@ public class DialogActivator : MonoBehaviour
     //Líneas del diálogo
     public string[] lines;
     //Para saber si el diálogo se puede activar o no
-    private bool canActivate;
+    public bool canActivate;
     //Sprite de diálogo del NPC
     public Sprite theNpcSprite;
     public bool dialogueActive = false;

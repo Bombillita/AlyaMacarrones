@@ -15,6 +15,7 @@ public class AlyaMechanics : MonoBehaviour
     private bool AlyaBaston = false;
     private SpriteRenderer _sR;
     public bool activePlant = false;
+    private bool _isPlant = false;
    
 
     // Start is called before the first frame update
@@ -27,7 +28,7 @@ public class AlyaMechanics : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) && _pCRefernce.canInteract)
+        if (Input.GetKeyDown(KeyCode.F) && _pCRefernce.canInteract && _isPlant == true)
         {
             if (activePlant == false)
             {
@@ -65,6 +66,7 @@ public class AlyaMechanics : MonoBehaviour
         {
             infopanel.SetActive(true);
             collision.GetComponent<PlayerC>().canInteract = true;
+            _isPlant = true;
         }
     }
 
@@ -74,6 +76,7 @@ public class AlyaMechanics : MonoBehaviour
         {
             infopanel.SetActive(false);
             collision.GetComponent<PlayerC>().canInteract = false;
+            _isPlant = false;
         }
     }
 

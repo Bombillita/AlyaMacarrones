@@ -5,7 +5,6 @@ public class PushableObject : MonoBehaviour
 {
 
     public bool canPush = false;
-    private bool pushing = false;
     private Rigidbody2D _rb;
     private PlayerC _pCref;
     
@@ -22,13 +21,11 @@ public class PushableObject : MonoBehaviour
         {
             _pCref.canRun = false;
             _rb.mass = 30.0f;
-            pushing = true;
         }
         else
         {
             _pCref.canRun = true;
             _rb.mass = 100.0f;
-            pushing = false;
         }
 
        
