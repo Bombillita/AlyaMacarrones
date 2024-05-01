@@ -20,7 +20,8 @@ public class PlayerC : MonoBehaviour
     private float _knockBackCounter;
     public bool seeLeft; //donde esta mirando
     public float runMode;
-    private bool _isRunning;
+    public bool _isRunning;
+    public bool canRun = true;
     public bool canInteract = false; //PARA INTERACUTAR !!1
     public bool interacting = false; //estamos interactuando
     //componentes
@@ -54,17 +55,20 @@ public class PlayerC : MonoBehaviour
 
             //FLIP DEL SPRITE y movimiento
             _theRB.velocity = new Vector2(Input.GetAxis("Horizontal") * moveSpeed, _theRB.velocity.y);
+            
 
             //CORRER
 
-            if (Input.GetKey(KeyCode.LeftShift))
+            if (Input.GetKey(KeyCode.LeftShift) && canRun == true)
             {
+                _isRunning = true;
                 _theRB.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * moveSpeed * runMode, _theRB.velocity.y);
-                _anim.SetBool("isRunning", true);
+                _anim.SetBool("isRunning", true);  
 
             }
             else
             {
+                _isRunning = false;
                 _theRB.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * moveSpeed, _theRB.velocity.y);
                 _anim.SetBool("isRunning", false);
             }
@@ -145,7 +149,14 @@ public class PlayerC : MonoBehaviour
         {
             _anim.SetBool("isGrounded", _isGrounded);
         }
+
+        if (collision.gameObject.CompareTag("PushableObj"))
+        {
+            _anim.SetBool("isGrounded", _isGrounded);
+        }
     }
+
+
 
     //Método de knockback
     public void Knockback()
