@@ -7,8 +7,6 @@ public class Switch : MonoBehaviour
     //refs
     public GameObject objectToSwitch;
     public Sprite downsprite, upsprite;
-   // public Animator upanim, downanim;
-    private bool _activateSwitch;
     public GameObject infopanel;
     private SpriteRenderer _sR;
     private PlayerC _pCRefernce;
@@ -29,16 +27,16 @@ public class Switch : MonoBehaviour
             if (objectToSwitch.GetComponent<ObjectActivator>().isActive == false)
             {
                 objectToSwitch.GetComponent<ObjectActivator>().ActivateObject();
-
                 objectToSwitch.GetComponent<ObjectActivator>().isActive = true;
-
                 _pCRefernce.interacting = true;
+                _sR.sprite = upsprite;
 
             }
             else
             {
                 objectToSwitch.GetComponent<ObjectActivator>().DeactivateObject();
                 objectToSwitch.GetComponent<ObjectActivator>().isActive = false;
+                _sR.sprite = downsprite;
             }
         }
     }
