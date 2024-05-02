@@ -28,7 +28,7 @@ public class AlyaMechanics : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) && _pCRefernce.canInteract && _isPlant == true)
+        if (Input.GetKeyDown(KeyCode.E) && _pCRefernce.canInteract && _isPlant == true)
         {
             if (activePlant == false)
             {

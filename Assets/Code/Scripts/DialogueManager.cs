@@ -35,7 +35,7 @@ public class DialogueManager : MonoBehaviour
        
         if (dialogBox.activeInHierarchy)
         {
-            if (Input.GetKeyDown(KeyCode.Return))
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
             {
 
                 if (!justStarted)

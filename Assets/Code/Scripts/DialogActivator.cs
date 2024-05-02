@@ -26,7 +26,7 @@ public class DialogActivator : MonoBehaviour
     void Update()
     {
         //Si el jugador puede activar el diálogo y presiona el botón de interacción y la caja de diálogo no está activa en la jerarquía
-        if (canActivate && Input.GetKeyDown(KeyCode.F) && !DialogueManager.instance.dialogBox.activeInHierarchy)
+        if (canActivate && Input.GetKeyDown(KeyCode.E) && !DialogueManager.instance.dialogBox.activeInHierarchy)
         {
             DialogueManager.instance.ShowDialog(lines, theNpcSprite);  
         }

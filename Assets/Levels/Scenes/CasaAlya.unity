@@ -689,6 +689,7 @@ Transform:
   m_Children:
   - {fileID: 1860901745}
   - {fileID: 735385695}
+  - {fileID: 905522116}
   - {fileID: 315892195}
   m_Father: {fileID: 2018582595}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -964,8 +965,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lines:
-  - n- caca
+  - n-Player
   - Que recuerdos de cuando me enfade jugando a la petanca...
+  canActivate: 0
   theNpcSprite: {fileID: 21300000, guid: 401cae1899e517d44b1249d0ac9a3fa9, type: 3}
   dialogueActive: 0
 --- !u!114 &315892201
@@ -2726,6 +2728,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1558071890}
     - target: {fileID: 7393314698684536224, guid: 0430f317e53f35c45bb0d96ba91e2d66, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7393314698684536224, guid: 0430f317e53f35c45bb0d96ba91e2d66, type: 3}
       propertyPath: levelToLoad
       value: 2
       objectReference: {fileID: 0}
@@ -3003,8 +3009,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lines:
-  - n- a
+  - n-Player
   - Un dia decidi que seria carpintera y le hice una puerta al gato
+  canActivate: 0
   theNpcSprite: {fileID: 21300000, guid: 401cae1899e517d44b1249d0ac9a3fa9, type: 3}
   dialogueActive: 0
 --- !u!114 &735385701
@@ -3160,6 +3167,127 @@ Transform:
   - {fileID: 952541518}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &905522115
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 231197252}
+    m_Modifications:
+    - target: {fileID: 600099502235924845, guid: 695ce34f5555fc24e9366dce43e97ef3, type: 3}
+      propertyPath: infopanel
+      value: 
+      objectReference: {fileID: 1558071890}
+    - target: {fileID: 600099502235924845, guid: 695ce34f5555fc24e9366dce43e97ef3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681663719250896331, guid: 695ce34f5555fc24e9366dce43e97ef3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -16.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681663719250896331, guid: 695ce34f5555fc24e9366dce43e97ef3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681663719250896331, guid: 695ce34f5555fc24e9366dce43e97ef3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681663719250896331, guid: 695ce34f5555fc24e9366dce43e97ef3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681663719250896331, guid: 695ce34f5555fc24e9366dce43e97ef3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681663719250896331, guid: 695ce34f5555fc24e9366dce43e97ef3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681663719250896331, guid: 695ce34f5555fc24e9366dce43e97ef3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681663719250896331, guid: 695ce34f5555fc24e9366dce43e97ef3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681663719250896331, guid: 695ce34f5555fc24e9366dce43e97ef3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681663719250896331, guid: 695ce34f5555fc24e9366dce43e97ef3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6200556223053642664, guid: 695ce34f5555fc24e9366dce43e97ef3, type: 3}
+      propertyPath: m_Name
+      value: objc (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7049354349672075143, guid: 695ce34f5555fc24e9366dce43e97ef3, type: 3}
+      propertyPath: m_Size.x
+      value: 2.6262803
+      objectReference: {fileID: 0}
+    - target: {fileID: 7049354349672075143, guid: 695ce34f5555fc24e9366dce43e97ef3, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0038068295
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 600099502235924845, guid: 695ce34f5555fc24e9366dce43e97ef3, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6200556223053642664, guid: 695ce34f5555fc24e9366dce43e97ef3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 905522119}
+    - targetCorrespondingSourceObject: {fileID: 6200556223053642664, guid: 695ce34f5555fc24e9366dce43e97ef3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 905522118}
+  m_SourcePrefab: {fileID: 100100000, guid: 695ce34f5555fc24e9366dce43e97ef3, type: 3}
+--- !u!4 &905522116 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2681663719250896331, guid: 695ce34f5555fc24e9366dce43e97ef3, type: 3}
+  m_PrefabInstance: {fileID: 905522115}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &905522117 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6200556223053642664, guid: 695ce34f5555fc24e9366dce43e97ef3, type: 3}
+  m_PrefabInstance: {fileID: 905522115}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &905522118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905522117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e48f9e9afd4aac4cbc265768f83ee43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info: {fileID: 1558071890}
+--- !u!114 &905522119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905522117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 482a11dcfed8f154c800cd8cb2766d96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lines:
+  - n-Player
+  - Creo que no es momento para ir al patio, tengo que buscar a mi gato
+  canActivate: 0
+  theNpcSprite: {fileID: 21300000, guid: 401cae1899e517d44b1249d0ac9a3fa9, type: 3}
+  dialogueActive: 0
 --- !u!1 &908211023
 GameObject:
   m_ObjectHideFlags: 0

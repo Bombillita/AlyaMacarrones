@@ -22,7 +22,7 @@ public class Switch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) && _pCRefernce.canInteract && _isSwitch == true)
+        if (Input.GetKeyDown(KeyCode.E) && _pCRefernce.canInteract && _isSwitch == true)
         {
             //si el objeto está desactivado
             if (objectToSwitch.GetComponent<ObjectActivator>().isActive == false)

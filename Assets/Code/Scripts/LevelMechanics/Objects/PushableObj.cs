@@ -7,7 +7,8 @@ public class PushableObject : MonoBehaviour
     public bool canPush = false;
     private Rigidbody2D _rb;
     private PlayerC _pCref;
-    
+    //public GameObject info;
+
 
     private void Start()
     {
@@ -28,7 +29,7 @@ public class PushableObject : MonoBehaviour
             _rb.mass = 100.0f;
         }
 
-       
+
 
     }
 
@@ -44,5 +45,21 @@ public class PushableObject : MonoBehaviour
         }
     }
 
-    
+   /* private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            Instantiate(info);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            Destroy(info);
+        }
+    } */
+
+
 }

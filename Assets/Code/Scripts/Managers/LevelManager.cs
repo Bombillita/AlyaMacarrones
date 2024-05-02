@@ -17,6 +17,7 @@ public class LevelManager : MonoBehaviour
     private PlayerHealthController _pHReference;
     //metodo para salir del nivel
     private LevelUIController _lUIController;
+    public int moneycollected;
    
 
     private void Start()

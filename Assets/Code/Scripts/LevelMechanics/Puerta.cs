@@ -33,7 +33,7 @@ public class Puerta : MonoBehaviour
     {
 
         //para que compruebe que si la puerta esta abierta
-        if (Input.GetKeyDown(KeyCode.F) && _canOpenDoor == true)
+        if (Input.GetKeyDown(KeyCode.E) && _canOpenDoor == true)
         {
             animpuerta.SetTrigger("pliopen");
             LoadLevel(levelToLoad);

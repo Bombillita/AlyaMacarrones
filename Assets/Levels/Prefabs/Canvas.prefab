@@ -884,7 +884,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeScreen: {fileID: 1985014507538104138}
-  fadeSpeed: 3
+  fadeSpeed: 5
   shouldFadeToBlack: 0
   shouldFadeFromBlack: 0
 --- !u!114 &7978931211600154825
@@ -904,6 +904,7 @@ MonoBehaviour:
   dialogBox: {fileID: 8792828463373800068}
   dialogLines: []
   currentLine: 0
+  hasinteracted: 0
 --- !u!1 &7195337247463547363
 GameObject:
   m_ObjectHideFlags: 0
@@ -1276,7 +1277,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Presiona "F" para interactuar
+  m_Text: Presiona "E" para interactuar
 --- !u!1 &8792828463373800068
 GameObject:
   m_ObjectHideFlags: 0

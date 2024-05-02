@@ -24,7 +24,7 @@ public class ObjectActivator : MonoBehaviour
         _sR.sprite = offSprite;
         Destroy(objeto1);
         Thread.Sleep(1000);
-        Instantiate(objeto1, point.position, Quaternion.identity);
+        Instantiate(objeto2, point.position, Quaternion.identity);
     }
 
     public void DeactivateObject()
