@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2681663719250896331}
   - component: {fileID: 7049354349672075143}
-  - component: {fileID: 600099502235924845}
+  - component: {fileID: 4726477759468642624}
+  - component: {fileID: 8289447294640115190}
   m_Layer: 0
   m_Name: objc
   m_TagString: Untagged
@@ -65,7 +66,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -1.0732154}
+  m_Offset: {x: 0.0038068295, y: -1.0732154}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -76,9 +77,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 3.1464303}
+  m_Size: {x: 2.6262803, y: 3.1464303}
   m_EdgeRadius: 0
---- !u!114 &600099502235924845
+--- !u!114 &4726477759468642624
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -87,10 +88,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 6200556223053642664}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6397e7679136de4cab8b55946b8f58b, type: 3}
+  m_Script: {fileID: 11500000, guid: 482a11dcfed8f154c800cd8cb2766d96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToSwitch: {fileID: 0}
-  downsprite: {fileID: 0}
-  upsprite: {fileID: 0}
-  infopanel: {fileID: 0}
+  lines:
+  - n-Player
+  - Un dia decidi que seria carpintera y le hice una puerta al gato
+  canActivate: 0
+  theNpcSprite: {fileID: 21300000, guid: 401cae1899e517d44b1249d0ac9a3fa9, type: 3}
+  dialogueActive: 0
+--- !u!114 &8289447294640115190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6200556223053642664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e48f9e9afd4aac4cbc265768f83ee43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info: {fileID: 0}

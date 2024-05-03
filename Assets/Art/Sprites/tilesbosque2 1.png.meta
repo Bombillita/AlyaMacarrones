@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fdd4394e893784d4287128543126bcbe
+guid: a3b6e6f75360621469ebdd6f9e90e98b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tiles_0
+      name: tilesbosque2 1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 871
-        width: 208
-        height: 209
+        x: 226
+        y: 1754
+        width: 202
+        height: 298
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bfef08ec1119dfc48a12f143fff7db16
-      internalID: 1768685081
+      spriteID: c4ae4e4c6b148164796207682136f24e
+      internalID: -754750237
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles_1
+      name: tilesbosque2 1_1
       rect:
         serializedVersion: 2
-        x: 215
-        y: 871
-        width: 209
-        height: 209
+        x: 607
+        y: 1838
+        width: 36
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13b088440311dca42a19c947d951547b
-      internalID: -1540654894
+      spriteID: c2634a30b9624a848be703a2ab834235
+      internalID: -1933781155
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles_2
+      name: tilesbosque2 1_2
       rect:
         serializedVersion: 2
-        x: 430
-        y: 871
-        width: 208
-        height: 209
+        x: 815
+        y: 1750
+        width: 250
+        height: 383
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3329599634f0cc41b4b62c81f77bd39
-      internalID: 118183702
+      spriteID: 858aa9b8b698c114d9036d5c8d0d812e
+      internalID: -1308998598
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles_3
+      name: tilesbosque2 1_3
       rect:
         serializedVersion: 2
-        x: 666
-        y: 890
-        width: 156
-        height: 173
+        x: 1294
+        y: 1558
+        width: 119
+        height: 577
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d7980ae67bcf944c96ea353cd98e075
-      internalID: 639144748
+      spriteID: c9e908187aefb9049aa20b6b99c04abf
+      internalID: 927549239
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles_4
+      name: tilesbosque2 1_4
       rect:
         serializedVersion: 2
-        x: 36
-        y: 450
-        width: 136
-        height: 410
+        x: 1524
+        y: 1558
+        width: 62
+        height: 577
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f6a8c7b6b7aca04e8405b463fb03e27
-      internalID: -1265889036
+      spriteID: 08db8e032ac09654aa0b0ca27acff95c
+      internalID: 491604855
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles_5
+      name: tilesbosque2 1_5
       rect:
         serializedVersion: 2
-        x: 290
-        y: 555
-        width: 208
-        height: 207
+        x: 1755
+        y: 1753
+        width: 241
+        height: 245
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3bd0ccc6978f0fd479d96d37a55eaf2d
-      internalID: 1919985495
+      spriteID: 85975a0b9359d234c873d7a76b61c112
+      internalID: -996416133
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles_6
+      name: tilesbosque2 1_7
       rect:
         serializedVersion: 2
-        x: 530
-        y: 556
-        width: 209
-        height: 208
+        x: 250
+        y: 839
+        width: 958
+        height: 423
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,20 +250,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41b6b7b2379adc54f9873924966dd6c7
-      internalID: -669042579
+      spriteID: 56805fce337ea754bad8342b0883a722
+      internalID: 1274873805
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles_7
+      name: tilesbosque2 1_10
       rect:
         serializedVersion: 2
-        x: 773
-        y: 556
-        width: 209
-        height: 208
+        x: 1458
+        y: 1089
+        width: 137
+        height: 146
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,8 +271,134 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 807cceff930ddf14e871c3f04c5a4286
-      internalID: 521311667
+      spriteID: ce3f0fd92cde73c42afe640cb1b3a1d8
+      internalID: -498162257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesbosque2 1_11
+      rect:
+        serializedVersion: 2
+        x: 1718
+        y: 1111
+        width: 120
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ade9d8ace8966349bbc119697d4fe41
+      internalID: 354455337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesbosque2 1_12
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 749
+        width: 491
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a36bbe514d93d834799548e87400ee29
+      internalID: -1684934430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesbosque2 1_13
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 136
+        width: 329
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db1affa41ab08784691b1827f35d85b5
+      internalID: -906140855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesbosque2 1_14
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 135
+        width: 103
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5a5dba33811e3f4fa0e1c992944b1db
+      internalID: -704674517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesbosque2 1_15
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 509
+        width: 363
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e448c0394faf5444bbf526a83803546a
+      internalID: 1192079150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesbosque2 1_16
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 122
+        width: 107
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd331ef90cd164d44acf68b2c3e89646
+      internalID: 103577399
       vertices: []
       indices: 
       edges: []
@@ -288,14 +414,23 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      tiles_0: 1768685081
-      tiles_1: -1540654894
-      tiles_2: 118183702
-      tiles_3: 639144748
-      tiles_4: -1265889036
-      tiles_5: 1919985495
-      tiles_6: -669042579
-      tiles_7: 521311667
+      tilesbosque2 1_0: -754750237
+      tilesbosque2 1_1: -1933781155
+      tilesbosque2 1_10: -498162257
+      tilesbosque2 1_11: 354455337
+      tilesbosque2 1_12: -1684934430
+      tilesbosque2 1_13: -906140855
+      tilesbosque2 1_14: -704674517
+      tilesbosque2 1_15: 1192079150
+      tilesbosque2 1_16: 103577399
+      tilesbosque2 1_2: -1308998598
+      tilesbosque2 1_3: 927549239
+      tilesbosque2 1_4: 491604855
+      tilesbosque2 1_5: -996416133
+      tilesbosque2 1_6: -249046886
+      tilesbosque2 1_7: 1274873805
+      tilesbosque2 1_8: -1997957987
+      tilesbosque2 1_9: -1717620306
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

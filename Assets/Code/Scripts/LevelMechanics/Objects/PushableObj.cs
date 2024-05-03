@@ -21,7 +21,7 @@ public class PushableObject : MonoBehaviour
         if (Input.GetKey(KeyCode.E) && canPush == true)
         {
             _pCref.canRun = false;
-            _rb.mass = 30.0f;
+            _rb.mass = 25.0f;
         }
         else
         {
