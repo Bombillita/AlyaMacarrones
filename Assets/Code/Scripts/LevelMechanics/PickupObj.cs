@@ -37,7 +37,7 @@ public class PickupObj : MonoBehaviour
 
             if (isGem && _canCollect == true)
             {
-                _lMReference.moneycollected++;
+                LevelManager.moneycollected++;
                 _uIReference.UpdateCurrency();
                 _isCollected = true;
                 Destroy(gameObject);

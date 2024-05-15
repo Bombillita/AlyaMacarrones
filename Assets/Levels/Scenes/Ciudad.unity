@@ -3726,6 +3726,7 @@ GameObject:
   - component: {fileID: 1210231913}
   - component: {fileID: 1210231914}
   - component: {fileID: 1210231915}
+  - component: {fileID: 1210231916}
   m_Layer: 0
   m_Name: Peanut
   m_TagString: Untagged
@@ -3907,6 +3908,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   info: {fileID: 6570712255575258637}
+--- !u!114 &1210231916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210231909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94d88ecbfb7703c499d8b442b80a7fd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Shop: {fileID: 1240989553}
 --- !u!1 &1224742089
 GameObject:
   m_ObjectHideFlags: 0

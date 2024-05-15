@@ -17,6 +17,7 @@ public class DialogueManager : MonoBehaviour
     private PlayerC _pCreference;
     public static DialogueManager instance;
     public bool hasinteracted = false;
+    public bool canOpenShop = false;
 
     private void Awake()
     {
@@ -35,7 +36,7 @@ public class DialogueManager : MonoBehaviour
        
         if (dialogBox.activeInHierarchy)
         {
-            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.E))
             {
 
                 if (!justStarted)
@@ -46,21 +47,16 @@ public class DialogueManager : MonoBehaviour
 
                     if (currentLine >= dialogLines.Length)
                     {
-                        //Desactivamos el cuadro de diálogo
+                        canOpenShop = true;
                         dialogBox.SetActive(false);
-                        //Permitimos que el jugador se mueva de nuevo
                         PlayerC.instance.canMove = true;
-                        hasinteracted = true;
-
-
                     }
                     //Si el diálogo aún no ha terminado
                     else
                     {
-                        //Comprobamos si hay un cambio de personaje en el diálogo
+                        canOpenShop = false;
                         CheckIfName(sNpc);
-                        //Muestra la línea de diálogo actual
-                        dialogText.text = dialogLines[currentLine];
+                        dialogText.text = dialogLines[currentLine];                        
                     }
                 }
                 //Si el diálogo ya empezó

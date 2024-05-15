@@ -4,21 +4,25 @@ using UnityEngine;
 
 public class ShopActivation : MonoBehaviour
 {
-    private DialogueManager _dmRef;
     [SerializeField] private GameObject Shop;
+    private DialogueManager _dmRef;
+    private PauseMenu _pMenuRef;
+    private PlayerC _pCRef;
     private bool _openShop = false;
-    public PlayerC _pCref;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
+        _pCRef = GameObject.Find("Player").GetComponent<PlayerC>();
         _dmRef = GameObject.Find("Canvas").GetComponent<DialogueManager>();
     }
-
-    // Update is called once per frame
+    private void Awake()
+    {
+        _pMenuRef = GameObject.Find("LevelManager").GetComponent<PauseMenu>();
+    }
+ 
     void Update()
     {
-        if (_dmRef.hasinteracted == true && Input.GetKeyDown(KeyCode.E))
+        if (_dmRef.canOpenShop == true)
         {
             ShopOpened();
             DialogActivator.instance.canActivate = false;
@@ -28,23 +32,32 @@ public class ShopActivation : MonoBehaviour
             Continue();
             DialogActivator.instance.canActivate = true;
         }
+
+        if (_openShop == true && Input.GetKeyDown(KeyCode.Escape))
+        {
+            Continue();
+        }
     }
 
     public void ShopOpened()
     {
-        _pCref.enabled = false;
-        Time.timeScale = 0f;
+        _pMenuRef.enabled = false;
         Shop.SetActive(true);
+        _pCRef.enabled = false;
+        Time.timeScale = 0f;
         _openShop = true;
     }
 
     public void Continue()
     {
+        _dmRef.canOpenShop = false;
+        _pMenuRef.enabled = true;
         Shop.SetActive(false);
-        _openShop = false;
-        _pCref.enabled = true;
+        _pCRef.enabled = true;
         Time.timeScale = 1f;
-
+        _openShop = false;
     }
-
+  
 }
+
+

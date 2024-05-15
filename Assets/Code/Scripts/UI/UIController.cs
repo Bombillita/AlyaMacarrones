@@ -70,7 +70,7 @@ public class UIController : MonoBehaviour
     //metodo dinero
     public void UpdateCurrency()
     {
-        currencytxt.text = _lMreference.moneycollected.ToString();
+        currencytxt.text = LevelManager.moneycollected.ToString();
 
     }
 }
