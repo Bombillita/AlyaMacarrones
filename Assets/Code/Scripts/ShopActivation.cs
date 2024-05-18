@@ -8,6 +8,7 @@ public class ShopActivation : MonoBehaviour
     private DialogueManager _dmRef;
     private PauseMenu _pMenuRef;
     private PlayerC _pCRef;
+    private inventory _iRef;
     private bool _openShop = false;
 
     private void Start()
@@ -18,6 +19,7 @@ public class ShopActivation : MonoBehaviour
     private void Awake()
     {
         _pMenuRef = GameObject.Find("LevelManager").GetComponent<PauseMenu>();
+        _iRef = GameObject.Find("LevelManager").GetComponent<inventory>();
     }
  
     void Update()
@@ -25,15 +27,15 @@ public class ShopActivation : MonoBehaviour
         if (_dmRef.canOpenShop == true)
         {
             ShopOpened();
-            DialogActivator.instance.canActivate = false;
+            
         }
         else
         {
             Continue();
-            DialogActivator.instance.canActivate = true;
+            
         }
 
-        if (_openShop == true && Input.GetKeyDown(KeyCode.Escape))
+        if (_dmRef.canOpenShop == true && Input.GetKeyDown(KeyCode.Escape))
         {
             Continue();
         }
@@ -41,8 +43,10 @@ public class ShopActivation : MonoBehaviour
 
     public void ShopOpened()
     {
+        _dmRef.canOpenShop = true;
         _pMenuRef.enabled = false;
         Shop.SetActive(true);
+        _iRef.enabled = false;
         _pCRef.enabled = false;
         Time.timeScale = 0f;
         _openShop = true;
@@ -52,6 +56,7 @@ public class ShopActivation : MonoBehaviour
     {
         _dmRef.canOpenShop = false;
         _pMenuRef.enabled = true;
+        _iRef.enabled = true;
         Shop.SetActive(false);
         _pCRef.enabled = true;
         Time.timeScale = 1f;

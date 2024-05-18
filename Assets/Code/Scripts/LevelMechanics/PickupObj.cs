@@ -5,7 +5,7 @@ using UnityEngine;
 public class PickupObj : MonoBehaviour
 {
 
-    public bool isGem, isHeal;
+    public bool isGem, isHeal, isObj;
     private bool _isCollected;
 
 
@@ -18,6 +18,10 @@ public class PickupObj : MonoBehaviour
     //Referencia al PlayerHealthController
     private PlayerHealthController _pHReference;
     private bool _canCollect = false;
+    private inventory _inventoryRef;
+
+    //para el inventario
+    public GameObject item;
 
     private void Start()
     {
@@ -26,6 +30,7 @@ public class PickupObj : MonoBehaviour
         //Inicializamos la referencia al PlayerHealthController
         _pHReference = GameObject.Find("Player").GetComponent<PlayerHealthController>();
         _lMReference = GameObject.Find("LevelManager").GetComponent<LevelManager>();
+        _inventoryRef = GameObject.Find("LevelManager").GetComponent<inventory>();
     }
 
 
@@ -58,6 +63,19 @@ public class PickupObj : MonoBehaviour
             else
             {
                 _canCollect = false;
+            }
+
+            if (isObj && _canCollect == true)
+            {
+                //si los slots estan vacios
+                for (int i = 0; i < _inventoryRef.slots.Length; i++)
+                {
+                    if (_inventoryRef.isFull[i] == false)
+                    { //se puede añadir objeto
+                        _inventoryRef.isFull[i] = true;
+                        break;
+                    }
+                }
             }
         }
     }
