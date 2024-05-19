@@ -50,12 +50,12 @@ public class MenuCursor : MonoBehaviour
 
         if (currentPoint == 1 && Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("Guardando");
+            _pMenuRef.Objetos();
         }
 
         if(currentPoint == 2 && Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("Objetos");
+            Debug.Log("Galeria");
         }
 
         if (currentPoint == 3 && Input.GetKeyDown(KeyCode.Space))
