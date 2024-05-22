@@ -10,6 +10,7 @@ public class ShopActivation : MonoBehaviour
     private PlayerC _pCRef;
     private inventory _iRef;
     private bool _openShop = false;
+    //private Shop _shopRef;
 
     private void Start()
     {
@@ -50,6 +51,7 @@ public class ShopActivation : MonoBehaviour
         _pCRef.enabled = false;
         Time.timeScale = 0f;
         _openShop = true;
+        //_shopRef.enabled = true;
     }
 
     public void Continue()
@@ -61,6 +63,7 @@ public class ShopActivation : MonoBehaviour
         _pCRef.enabled = true;
         Time.timeScale = 1f;
         _openShop = false;
+        //_shopRef.enabled = false;
     }
   
 }

@@ -75,4 +75,18 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene(scene);
 
     }
+
+    public void SaveCurency()
+    {
+        PlayerPrefs.SetFloat("moneycollected", moneycollected);
+    }
+
+    public void LoadCurerncy()
+    {
+        if (PlayerPrefs.HasKey("moneycollected"))
+        {
+            moneycollected = PlayerPrefs.GetInt("moneycollected");
+        }
+    }
+
 }

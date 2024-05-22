@@ -4407,6 +4407,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGem: 1
   isHeal: 0
+  isObj: 0
+  item: {fileID: 0}
 --- !u!114 &1071485060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8023,7 +8025,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7722824726756449292, guid: cdc987381177a7e49941f70a14253eeb, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8929985337508449144, guid: cdc987381177a7e49941f70a14253eeb, type: 3}
       propertyPath: m_Color.b
@@ -8134,6 +8136,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8237069151539082706, guid: b4adaf5c7b40084489e27d0ecf5e9f8c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0a887c70e242e074199652ec33395235, type: 3}
     - target: {fileID: 8303443311712924101, guid: b4adaf5c7b40084489e27d0ecf5e9f8c, type: 3}
       propertyPath: m_Name
       value: MenuPausa

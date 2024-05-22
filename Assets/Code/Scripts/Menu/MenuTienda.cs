@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuTienda : MonoBehaviour
 {
-    public Transform[] points;
+  /*  public Transform[] points;
 
     public int currentPoint;
 
@@ -54,7 +54,7 @@ public class MenuTienda : MonoBehaviour
             _sMenu.Continue();
         }
     }
-
+   */
     
 }
 
