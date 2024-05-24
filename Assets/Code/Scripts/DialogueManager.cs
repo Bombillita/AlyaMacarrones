@@ -18,6 +18,7 @@ public class DialogueManager : MonoBehaviour
     public static DialogueManager instance;
     public bool hasinteracted = false;
     public bool canOpenShop = false;
+    public bool isShop = false;
 
     private void Awake()
     {
@@ -47,7 +48,15 @@ public class DialogueManager : MonoBehaviour
 
                     if (currentLine >= dialogLines.Length)
                     {
-                        canOpenShop = true;
+                        if (isShop == true)
+                        {
+                            canOpenShop = true;
+                        }
+                        else
+                        {
+                            canOpenShop = false;
+                        }
+                        
                         dialogBox.SetActive(false);
                         PlayerC.instance.canMove = true;
                     }

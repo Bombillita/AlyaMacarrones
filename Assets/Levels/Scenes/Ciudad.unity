@@ -490,7 +490,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: ede2469b41fe3f1479e176b3dcd2bc29, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4034,6 +4034,7 @@ MonoBehaviour:
   canActivate: 0
   theNpcSprite: {fileID: 21300000, guid: 5ce0e03881dc095479dd0059e69fd315, type: 3}
   dialogueActive: 0
+  isShop: 1
 --- !u!114 &1210231915
 MonoBehaviour:
   m_ObjectHideFlags: 0

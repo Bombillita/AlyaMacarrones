@@ -10,6 +10,7 @@ public class ShopActivation : MonoBehaviour
     private PlayerC _pCRef;
     private inventory _iRef;
     private bool _openShop = false;
+   
     //private Shop _shopRef;
 
     private void Start()

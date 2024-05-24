@@ -12,14 +12,17 @@ public class DialogActivator : MonoBehaviour
     public Sprite theNpcSprite;
     public bool dialogueActive = false;
     private PlayerC _pcref;
-    
+    public bool isShop = false;
+
 
     public static DialogActivator instance;
+    private DialogueManager _dmRef;
 
     // Start is called before the first frame update
     void Start()
     {
         _pcref = GameObject.Find("Player").GetComponent<PlayerC>();
+        _dmRef = GameObject.Find("Canvas").GetComponent<DialogueManager>();
     }
 
     // Update is called once per frame
@@ -28,7 +31,9 @@ public class DialogActivator : MonoBehaviour
         //Si el jugador puede activar el diálogo y presiona el botón de interacción y la caja de diálogo no está activa en la jerarquía
         if (canActivate && Input.GetKeyDown(KeyCode.E) && !DialogueManager.instance.dialogBox.activeInHierarchy)
         {
-            DialogueManager.instance.ShowDialog(lines, theNpcSprite);  
+            _dmRef.isShop = isShop;
+            DialogueManager.instance.ShowDialog(lines, theNpcSprite);
+            
         }
 
         if (DialogueManager.instance.dialogBox.activeInHierarchy)
