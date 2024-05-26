@@ -7,12 +7,14 @@ public class inventory : MonoBehaviour
 {
     public bool[] isFull;
     public GameObject[] slots;
-    [SerializeField] private GameObject Inventory;
+    [SerializeField] public GameObject Inventory;
 
     //referencias
     private PauseMenu _pMenuRef;
     private PlayerC _pCRef;
     public bool inventoryOpen = false;
+    public static inventory instance;
+
 
     private void Start()
     {

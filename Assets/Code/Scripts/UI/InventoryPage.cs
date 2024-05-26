@@ -30,6 +30,13 @@ public class InventoryPage : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (inventory.instance.Inventory.activeInHierarchy)
+        {
+            itemDescription.ResetDescription();
+        }
+    }
     /*si el inventario esta abierto
     inventoryItems[0].SetData(image);
 
