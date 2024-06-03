@@ -18,7 +18,7 @@ public class PickupObj : MonoBehaviour
     //Referencia al PlayerHealthController
     private PlayerHealthController _pHReference;
     private bool _canCollect = false;
-    private inventory _inventoryRef;
+    private Inventory _inventoryRef;
 
     //para el inventario
     public GameObject item;
@@ -30,7 +30,7 @@ public class PickupObj : MonoBehaviour
         //Inicializamos la referencia al PlayerHealthController
         _pHReference = GameObject.Find("Player").GetComponent<PlayerHealthController>();
         _lMReference = GameObject.Find("LevelManager").GetComponent<LevelManager>();
-        _inventoryRef = GameObject.Find("LevelManager").GetComponent<inventory>();
+        _inventoryRef = GameObject.Find("LevelManager").GetComponent<Inventory>();
     }
 
 
@@ -51,7 +51,7 @@ public class PickupObj : MonoBehaviour
 
             if (isHeal && _canCollect == true)
             {
-                if (_pHReference.currentHealth != _pHReference.maxHealth)
+                if (PlayerHealthController.currentHealth != _pHReference.maxHealth)
                 {
                     _pHReference.HealPlayer();
                     _isCollected = true;
@@ -65,21 +65,21 @@ public class PickupObj : MonoBehaviour
                 _canCollect = false;
             }
 
-            if (isObj && _canCollect == true)
+            /*if (isObj && _canCollect == true)
             {
                 //si los slots estan vacios
-                for (int i = 0; i < _inventoryRef.slots.Length; i++)
+                /*for (int i = 0; i < _inventoryRef.slots.Length; i++)
                 {
                     if (_inventoryRef.isFull[i] == false)
                     { //se puede añadir objeto
                         _inventoryRef.isFull[i] = true;
                         break;
                     }
-                }
+                }*/
             }
         }
     }
-}
+
 
 
 

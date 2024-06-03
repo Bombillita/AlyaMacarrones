@@ -22,6 +22,7 @@ public class UIController : MonoBehaviour
         _pHReference = GameObject.Find("Player").GetComponent<PlayerHealthController>();
         _lMreference = GameObject.Find("LevelManager").GetComponent<LevelManager>();
         UpdateCurrency();
+        UpdateHealthDisplay();
     }
 
 
@@ -39,7 +40,7 @@ public class UIController : MonoBehaviour
         //}
 
         //Dependiendo del valor de la vida actual del jugador
-        switch (_pHReference.currentHealth)
+        switch (PlayerHealthController.currentHealth)
         {
             //En el caso en el que la vida actual valga 3 - vida completa
             case 3:

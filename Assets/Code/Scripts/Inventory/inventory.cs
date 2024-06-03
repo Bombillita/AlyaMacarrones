@@ -3,18 +3,19 @@ using System.Collections.Generic;
 using System.Drawing;
 using UnityEngine;
 
-public class inventory : MonoBehaviour
+public class Inventory : MonoBehaviour
 {
-    public bool[] isFull;
-    public GameObject[] slots;
-    [SerializeField] public GameObject Inventory;
+    //public bool isFull = false;
+    [SerializeField] public GameObject inventory;
+    [SerializeField] public GameObject Menupausa;
 
     //referencias
     private PauseMenu _pMenuRef;
     private PlayerC _pCRef;
     public bool inventoryOpen = false;
-    public static inventory instance;
+    public static Inventory instance;
 
+    //public List<InventoryItem> items = new List<InventoryItem>();
 
     private void Start()
     {
@@ -38,6 +39,12 @@ public class inventory : MonoBehaviour
         {
             CloseInventory();
         }
+
+        if (inventoryOpen == true)
+        {
+            Menupausa.SetActive(false);
+        }
+    
     }
 
     public void OpenInventory()
@@ -45,7 +52,7 @@ public class inventory : MonoBehaviour
         inventoryOpen = true;
         _pCRef.enabled = false;
         _pMenuRef.enabled = false;
-        Inventory.SetActive(true);
+        inventory.SetActive(true);
         Time.timeScale = 0f;      
     }
 
@@ -54,7 +61,12 @@ public class inventory : MonoBehaviour
         inventoryOpen = false;
         _pCRef.enabled = true;
         _pMenuRef.enabled = true;
-        Inventory.SetActive(false);
+        inventory.SetActive(false);
         Time.timeScale = 1f;
+    }
+
+    public void AddItem()
+    {
+
     }
 }

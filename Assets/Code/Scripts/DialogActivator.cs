@@ -13,12 +13,12 @@ public class DialogActivator : MonoBehaviour
     public bool dialogueActive = false;
     private PlayerC _pcref;
     public bool isShop = false;
+    public bool isInteractableObj = false;
 
 
     public static DialogActivator instance;
     private DialogueManager _dmRef;
 
-    // Start is called before the first frame update
     void Start()
     {
         _pcref = GameObject.Find("Player").GetComponent<PlayerC>();
@@ -31,6 +31,7 @@ public class DialogActivator : MonoBehaviour
         //Si el jugador puede activar el diálogo y presiona el botón de interacción y la caja de diálogo no está activa en la jerarquía
         if (canActivate && Input.GetKeyDown(KeyCode.E) && !DialogueManager.instance.dialogBox.activeInHierarchy)
         {
+            _dmRef.isInteractableObj = isInteractableObj;
             _dmRef.isShop = isShop;
             DialogueManager.instance.ShowDialog(lines, theNpcSprite);
             
@@ -49,7 +50,6 @@ public class DialogActivator : MonoBehaviour
 
     }
 
-    //Si el jugador entra en la zona de Trigger puede activar el diálogo
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -57,7 +57,6 @@ public class DialogActivator : MonoBehaviour
 
     }
 
-    //Si el jugador sale de la zona de Trigger ya no puede activar le diálogo
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))

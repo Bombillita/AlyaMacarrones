@@ -5,10 +5,11 @@ using UnityEngine;
 public class ShopActivation : MonoBehaviour
 {
     [SerializeField] private GameObject Shop;
+    [SerializeField] private GameObject infopanelalt;
     private DialogueManager _dmRef;
     private PauseMenu _pMenuRef;
     private PlayerC _pCRef;
-    private inventory _iRef;
+    private Inventory _iRef;
     private bool _openShop = false;
    
     //private Shop _shopRef;
@@ -21,7 +22,7 @@ public class ShopActivation : MonoBehaviour
     private void Awake()
     {
         _pMenuRef = GameObject.Find("LevelManager").GetComponent<PauseMenu>();
-        _iRef = GameObject.Find("LevelManager").GetComponent<inventory>();
+        _iRef = GameObject.Find("LevelManager").GetComponent<Inventory>();
     }
  
     void Update()
@@ -40,6 +41,11 @@ public class ShopActivation : MonoBehaviour
         if (_dmRef.canOpenShop == true && Input.GetKeyDown(KeyCode.Escape))
         {
             Continue();
+        }
+
+        if (_openShop == true)
+        {
+            infopanelalt.SetActive(false);
         }
     }
 

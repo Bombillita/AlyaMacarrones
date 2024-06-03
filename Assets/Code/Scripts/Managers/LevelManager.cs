@@ -9,7 +9,7 @@ public class LevelManager : MonoBehaviour
     //Variable de tiempo para la corrutina
     public float waitToRespawn;
     public float showGameOver;
-
+    
     //Refs
     private PlayerC _pCReference;
     private CheckpointController _cReference;
@@ -51,7 +51,7 @@ public class LevelManager : MonoBehaviour
         //Pos de respawm
         _pCReference.transform.position = _cReference.spawnPoint;
         //Vida del jugador al máximo
-        _pHReference.currentHealth = _pHReference.maxHealth;
+        PlayerHealthController.currentHealth = _pHReference.maxHealth;
         //Actualizar UI
         _uIReference.UpdateHealthDisplay();
     }
@@ -88,5 +88,7 @@ public class LevelManager : MonoBehaviour
             moneycollected = PlayerPrefs.GetInt("moneycollected");
         }
     }
+
+    
 
 }

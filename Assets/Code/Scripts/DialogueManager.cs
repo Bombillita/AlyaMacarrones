@@ -19,6 +19,7 @@ public class DialogueManager : MonoBehaviour
     public bool hasinteracted = false;
     public bool canOpenShop = false;
     public bool isShop = false;
+    public bool isInteractableObj = false;
 
     private void Awake()
     {
@@ -48,7 +49,7 @@ public class DialogueManager : MonoBehaviour
 
                     if (currentLine >= dialogLines.Length)
                     {
-                        if (isShop == true)
+                        if (isShop == true || isInteractableObj == true)
                         {
                             canOpenShop = true;
                         }

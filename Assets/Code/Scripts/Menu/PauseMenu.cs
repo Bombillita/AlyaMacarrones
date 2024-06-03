@@ -8,7 +8,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject MenuPausa;
 
     private bool _pausedGame = false;
-    private inventory _invRef;
+    private Inventory _invRef;
     public PlayerC _pCref;
 
     private void Start()
@@ -18,7 +18,7 @@ public class PauseMenu : MonoBehaviour
 
     private void Awake()
     {
-        _invRef = GameObject.Find("LevelManager").GetComponent<inventory>();
+        _invRef = GameObject.Find("LevelManager").GetComponent<Inventory>();
     }
 
     private void Update()

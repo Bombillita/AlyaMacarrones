@@ -6,17 +6,9 @@ using UnityEngine.SceneManagement;
 public class GameOverMenu : MonoBehaviour
 {
     [SerializeField] private GameObject MenuGameOver;
-    private LevelUIController _uIReference;
     public float showGameOver;
-    private PlayerHealthController _pHController;
     private LevelManager _lReference;
    
-
-    private void Start()
-    {
-        _uIReference = GameObject.Find("Canvas").GetComponent<LevelUIController>();
-        _pHController = GameObject.Find("Player").GetComponent<PlayerHealthController>();
-    }
 
     private void Awake()
     {
@@ -32,8 +24,6 @@ public class GameOverMenu : MonoBehaviour
 
     private IEnumerator GameOverCo()
     {
-        _uIReference.FadeToBlack();
-
         yield return new WaitForSeconds(showGameOver);
 
         MenuGameOver.SetActive(true);
@@ -45,7 +35,6 @@ public class GameOverMenu : MonoBehaviour
     {
         _lReference.RespawnPlayer();
         MenuGameOver.SetActive(false);
-        _uIReference.FadeFromBlack();
     }
 
     public void Menu()

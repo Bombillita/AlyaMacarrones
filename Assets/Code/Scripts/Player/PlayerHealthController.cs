@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerHealthController : MonoBehaviour
 {
     
-    [HideInInspector] public int currentHealth;
+    public static int currentHealth;
     public int maxHealth;
     public float invincibleLength; 
     private float _invincibleCounter; 
@@ -119,6 +119,22 @@ public class PlayerHealthController : MonoBehaviour
         {
             currentHealth = maxHealth;
             _uIReference.UpdateHealthDisplay();
+        }
+    }
+
+
+
+    public void SaveHealthG()
+    {
+        PlayerPrefs.SetInt("currenthealth", currentHealth);
+    }
+
+    public void LoadHealthG()
+    {
+        if (PlayerPrefs.HasKey("currenthealth"))
+        {
+            _uIReference.UpdateHealthDisplay();
+            currentHealth = PlayerPrefs.GetInt("currenthealth");
         }
     }
 }

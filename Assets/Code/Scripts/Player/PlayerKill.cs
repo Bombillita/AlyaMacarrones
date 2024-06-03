@@ -26,7 +26,7 @@ public class PlayerKill : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            _pHReference.currentHealth = 0;
+            PlayerHealthController.currentHealth = 0;
             _uIReference.UpdateHealthDisplay();
             _gOMenu.GameOver();
         }

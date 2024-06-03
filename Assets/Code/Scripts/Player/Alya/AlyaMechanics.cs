@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,7 +13,7 @@ public class AlyaMechanics : MonoBehaviour
     public GameObject objectToSwitch;
     private PlayerC _pCRefernce;
     public GameObject infopanel;
-    private bool AlyaBaston = false;
+    public bool AlyaBaston = false;
     private SpriteRenderer _sR;
     public bool activePlant = false;
     private bool _isPlant = false;
@@ -30,6 +31,9 @@ public class AlyaMechanics : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && _pCRefernce.canInteract && _isPlant == true)
         {
+            _pCRefernce.interacting = true;
+            AlyaBaston = true;
+
             if (activePlant == false)
             {
                 //planta1
@@ -38,12 +42,13 @@ public class AlyaMechanics : MonoBehaviour
                 activePlant = true;
 
                 //planta2
-                PlantaAlya2.SetActive(false);
-                
+                PlantaAlya2.SetActive(false);     
+
             }
 
-            else 
+            else
             {
+                
                 //planta1
                 PlantaAlya.SetActive(false);
                 StartCoroutine(LockMovement());
@@ -51,12 +56,19 @@ public class AlyaMechanics : MonoBehaviour
 
                 //planta2
                 PlantaAlya2.SetActive(true);
-            }
 
-            
-            
+            }
+            _pCRefernce.interacting = true;
+
         }
-       
+
+        if (AlyaBaston == true)
+        {
+            _pCRefernce.GetComponent<Animator>().SetTrigger("Baston");
+        }
+
+
+
     }
 
     //Puede interactuar
@@ -67,6 +79,7 @@ public class AlyaMechanics : MonoBehaviour
             infopanel.SetActive(true);
             collision.GetComponent<PlayerC>().canInteract = true;
             _isPlant = true;
+            
         }
     }
 
@@ -82,21 +95,26 @@ public class AlyaMechanics : MonoBehaviour
 
     public IEnumerator LockMovement()
     {
-        _pCRefernce.enabled = false;
 
         yield return new WaitForSeconds(1f);
 
+        _pCRefernce.GetComponent<Animator>().ResetTrigger("Baston");
         if (activePlant == true)
         {
             _sR.sprite = onSprite;
+            AlyaBaston = false;
+            _pCRefernce.interacting = false;
         }
         else
         {
             _sR.sprite = offSprite;
+            AlyaBaston = false ;
+            _pCRefernce.interacting = false;
         }
 
-        _pCRefernce.enabled = true;
     }
+
+    
 
    
 }

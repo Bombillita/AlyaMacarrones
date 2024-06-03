@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerC : MonoBehaviour
 {
-    
+    public string areatransitionName;
     public float moveSpeed;
     public float jumpForce;
     //Variable para saber si el jugador está en el suelo
@@ -30,6 +30,7 @@ public class PlayerC : MonoBehaviour
     private SpriteRenderer _theSR;
     public Sprite PlayerSprite;
     public bool canMove = true;
+
 
     //instance
     public static PlayerC instance;
@@ -130,7 +131,7 @@ public class PlayerC : MonoBehaviour
             _anim.SetBool("isGrounded", _isGrounded);
 
 
-        
+
 
         //si interactuo estoy tieso
         if (interacting == true)
@@ -138,8 +139,11 @@ public class PlayerC : MonoBehaviour
             moveSpeed = 0;
             jumpForce = 0;
         }
-
-      
+        else
+        {
+            moveSpeed = 5.4f;
+            jumpForce = 15f;
+        }
 
     }
 

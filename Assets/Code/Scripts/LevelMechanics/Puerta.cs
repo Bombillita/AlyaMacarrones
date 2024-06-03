@@ -8,10 +8,11 @@ public class Puerta : MonoBehaviour
     //refs
     public Animator animpuerta;
     private LevelManager _lReference;
-    private bool _canOpenDoor = false;
+    public bool _canOpenDoor = false;
     private PlayerC _pCReference;
     public GameObject infoPanel;
     public int levelToLoad;
+    public string areatransitionName;
    
    
 
@@ -36,6 +37,7 @@ public class Puerta : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && _canOpenDoor == true)
         {
             animpuerta.SetTrigger("pliopen");
+            _pCReference.areatransitionName = areatransitionName;
             LoadLevel(levelToLoad);
             _pCReference.interacting = true;         
         }
