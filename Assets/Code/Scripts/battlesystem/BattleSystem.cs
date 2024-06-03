@@ -9,7 +9,12 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] GameObject Buttons;
     public BattleState state;
     public GameObject playerPrefab;
+    public GameObject enemytutoPrefab;
     public GameObject enemyPrefab;
+    //private bool isTutorial;
+
+    public static bool enemydefeated;
+    public static bool playerdead;
 
     public Transform playerbase;
     public Transform enemybase;
@@ -22,10 +27,12 @@ public class BattleSystem : MonoBehaviour
     public BattleUI playerUI;
     public BattleUI enemyUI;
     
+
     void Start()
     {
         state = BattleState.START;
         StartCoroutine(SetUpBattle());
+        //CombatOnTrigger.istutorial = isTutorial;
     }
 
     IEnumerator SetUpBattle()
@@ -33,8 +40,19 @@ public class BattleSystem : MonoBehaviour
         GameObject playerGO = Instantiate(playerPrefab, playerbase);
         playerUnit = playerGO.GetComponent<Unit>();
 
-        GameObject enemyGO =Instantiate(enemyPrefab, enemybase);
-        enemyUnit = enemyGO.GetComponent<Unit>();
+
+        if (CombatOnTrigger.istutorial == true)
+        {
+            GameObject enemyGO = Instantiate(enemytutoPrefab, enemybase);
+            enemyUnit = enemyGO.GetComponent<Unit>();
+
+        }
+        else
+        {
+            GameObject enemyGO = Instantiate(enemyPrefab, enemybase);
+            enemyUnit = enemyGO.GetComponent<Unit>();
+        }
+        
 
         Buttons.SetActive(false);
 
@@ -75,7 +93,7 @@ public class BattleSystem : MonoBehaviour
     void PlayerTurn()
     {
         Buttons.SetActive(true);
-        dialogueText.text = "";
+        dialogueText.text = "Ataquen";
     }
     
     IEnumerator EnemyTurn()
@@ -106,7 +124,7 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator PlayerHeal()
     {
-        playerUnit.Heal(5);
+        playerUnit.Heal(7);
 
         playerUI.SetHP(playerUnit.currentHP);
         dialogueText.text = "Estáis dando volteretas";
@@ -140,11 +158,17 @@ public class BattleSystem : MonoBehaviour
         Buttons.SetActive(false);
         if (state == BattleState.WON)
         {
-            dialogueText.text = "¡Lo han conseguido!";
+            if (CombatOnTrigger.istutorial == true)
+            {
+                CombatOnTrigger.istutorial = false;
+            }
 
+            dialogueText.text = "¡Lo han conseguido!";
+            enemydefeated = true;
         }
         else if (state == BattleState.LOST)
         {
+            playerdead = true;
             dialogueText.text = "Han perdido";
         }
 

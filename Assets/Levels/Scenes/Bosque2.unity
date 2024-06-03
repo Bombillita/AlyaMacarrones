@@ -4442,7 +4442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 065958400ad0c2d4f8c9a72d526fadb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  istutorial: 0
+  holaTutorial: 1
 --- !u!1 &1578119496
 GameObject:
   m_ObjectHideFlags: 0

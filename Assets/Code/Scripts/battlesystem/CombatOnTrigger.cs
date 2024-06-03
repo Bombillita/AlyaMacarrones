@@ -5,12 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class CombatOnTrigger : MonoBehaviour
 {
-    public static bool istutorial;
+    public static bool istutorial = true;
     private LevelUIController _uiRef;
 
     private void Start()
     {
-       _uiRef = GameObject.Find("Canvas").GetComponent<LevelUIController>();
+        _uiRef = GameObject.Find("Canvas").GetComponent<LevelUIController>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -29,4 +29,6 @@ public class CombatOnTrigger : MonoBehaviour
 
         SceneManager.LoadScene("Battle");
     }
+
+
 }
