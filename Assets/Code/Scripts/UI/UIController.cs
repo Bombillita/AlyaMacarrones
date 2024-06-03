@@ -18,11 +18,12 @@ public class UIController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        UpdateHealthDisplay();
         //Inicializamos la referencia al PlayerHealthController
         _pHReference = GameObject.Find("Player").GetComponent<PlayerHealthController>();
         _lMreference = GameObject.Find("LevelManager").GetComponent<LevelManager>();
         UpdateCurrency();
-        UpdateHealthDisplay();
+        
     }
 
 

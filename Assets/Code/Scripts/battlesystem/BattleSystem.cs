@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
 public class BattleSystem : MonoBehaviour
 {
-
+    [SerializeField] GameObject Buttons;
     public BattleState state;
     public GameObject playerPrefab;
     public GameObject enemyPrefab;
@@ -36,6 +36,7 @@ public class BattleSystem : MonoBehaviour
         GameObject enemyGO =Instantiate(enemyPrefab, enemybase);
         enemyUnit = enemyGO.GetComponent<Unit>();
 
+        Buttons.SetActive(false);
 
 
         dialogueText.text = "¡Alya y Ony se preparan para luchar contra " + enemyUnit.unitName + "! ¿Qué harán?";
@@ -73,11 +74,13 @@ public class BattleSystem : MonoBehaviour
 
     void PlayerTurn()
     {
+        Buttons.SetActive(true);
         dialogueText.text = "";
     }
     
     IEnumerator EnemyTurn()
     {
+        Buttons.SetActive(false);
         dialogueText.text = enemyUnit.unitName + "ataca";
 
         yield return new WaitForSeconds(1f);
@@ -97,6 +100,7 @@ public class BattleSystem : MonoBehaviour
         {
             state = BattleState.PLAYERTURN;
             PlayerTurn();
+            Buttons.SetActive(true);
         }
     }
 
@@ -133,6 +137,7 @@ public class BattleSystem : MonoBehaviour
 
     void EndBattle()
     {
+        Buttons.SetActive(false);
         if (state == BattleState.WON)
         {
             dialogueText.text = "¡Lo han conseguido!";

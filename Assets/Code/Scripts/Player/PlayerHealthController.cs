@@ -28,12 +28,14 @@ public class PlayerHealthController : MonoBehaviour
     }
     void Start()
     {
+        currentHealth = maxHealth;
         //Inicializamos refs
         _uIReference = GameObject.Find("Canvas").GetComponent<UIController>();
         _pCReference = GetComponent<PlayerC>();
         _sR = GetComponent<SpriteRenderer>();
         _lReference = GameObject.Find("LevelManager").GetComponent<LevelManager>();
-        currentHealth = maxHealth;
+        
+        
     }
 
     
@@ -119,22 +121,6 @@ public class PlayerHealthController : MonoBehaviour
         {
             currentHealth = maxHealth;
             _uIReference.UpdateHealthDisplay();
-        }
-    }
-
-
-
-    public void SaveHealthG()
-    {
-        PlayerPrefs.SetInt("currenthealth", currentHealth);
-    }
-
-    public void LoadHealthG()
-    {
-        if (PlayerPrefs.HasKey("currenthealth"))
-        {
-            _uIReference.UpdateHealthDisplay();
-            currentHealth = PlayerPrefs.GetInt("currenthealth");
         }
     }
 }
