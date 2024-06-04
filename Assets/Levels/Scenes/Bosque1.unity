@@ -589,6 +589,87 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &132179599
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3308018403335150943, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
+      propertyPath: m_Name
+      value: objetodialogoA (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209851009496166404, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 44.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209851009496166404, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209851009496166404, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209851009496166404, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209851009496166404, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209851009496166404, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209851009496166404, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209851009496166404, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209851009496166404, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209851009496166404, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6077915258627108232, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
+      propertyPath: lines.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6077915258627108232, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
+      propertyPath: lines.Array.data[1]
+      value: Ah, pues eso pasaba...
+      objectReference: {fileID: 0}
+    - target: {fileID: 6077915258627108232, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
+      propertyPath: lines.Array.data[2]
+      value: n-Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6077915258627108232, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
+      propertyPath: lines.Array.data[3]
+      value: "\xBFQu\xE9 hace una caja ah\xED colgada?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6077915258627108232, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
+      propertyPath: lines.Array.data[4]
+      value: n-Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6077915258627108232, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
+      propertyPath: lines.Array.data[5]
+      value: Pobres plantas, lo que tienen que soportar...
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
 --- !u!1 &155361837
 GameObject:
   m_ObjectHideFlags: 0
@@ -950,14 +1031,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - n- fulana
-  - Converti sin querer a mi esposo en una rata.. Creo que me odia
+  - "\xA1Hola! \xBFEres nueva por aqu\xED? \xA1No te hab\xEDa visto n\xFAnca!"
   - n-Player
-  - QUE
+  - Si, es que-
+  - n-M
+  - "\xA1ENCANTADA! Soy Mooni, y este es mi marido David"
+  - n-m
+  - "Aunque... Antes era humano.. Pero me dej\xF3 probar mis hechizos con \xE9l y
+    acab\xF3 as\xED"
+  - n-m
+  - "Bueno, suficiente he hablado de mi. \xBFQu\xE9 haces por aqu\xED?"
+  - n-Player
+  - "\xBFPor casualidad no habr\xE1s visto a un grupo de personas con pinta de malechores,
+    con una jaula... Y un gato..?"
+  - n-m
+  - "\xA1AH S\xCD! Iban murmurando algo del gato y de una piedra.. Eran muy raros"
+  - n-Player
+  - "\xBFPor d\xF3nde han ido?"
+  - n-m
+  - "Se han adentrado al bosque, \xBFPor qu\xE9?"
+  - n- Player
+  - Han raptado a mi gato, y quiero recuperarlo
+  - n-m
+  - "\xA1\xBFQU\xC9?! \xA1\xBFEnserio?!"
+  - n-Player
+  - "S\xED.. \xBFPodr\xEDas ayudarme?"
+  - n-m
+  - "Te puedo hacer una oferta especial, por ser mi nueva amiga... Si me traes 2
+    monedas de oro, te dejo atajar por mi casa. Seguro que as\xED les pillas."
+  - n-m
+  - "Jurar\xEDa que hay una cerca de una seta morada y otra en la entrada del bosque"
+  - n-m
+  - "Cuando las tengas, solo ac\xE9rcate a mi puerta y d\xE9jamelas por ah\xED"
   canActivate: 0
   theNpcSprite: {fileID: 21300000, guid: 3742e5f0dc943b7409d501db8e0861be, type: 3}
   dialogueActive: 0
   isShop: 0
   isInteractableObj: 1
+  dialoguecanBeActive: 0
 --- !u!114 &230671172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1459,6 +1570,68 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &299970636
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3308018403335150943, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
+      propertyPath: m_Name
+      value: objetodialogoA
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209851009496166404, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209851009496166404, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.0140936
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209851009496166404, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209851009496166404, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209851009496166404, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209851009496166404, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209851009496166404, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209851009496166404, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209851009496166404, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209851009496166404, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6077915258627108232, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
+      propertyPath: lines.Array.data[1]
+      value: "N\xFAnca antes hab\xEDa venido hasta aqu\xED yo sola... A ver que me
+        encuentro"
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
 --- !u!1 &368027417
 GameObject:
   m_ObjectHideFlags: 0
@@ -4160,12 +4333,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - n-Player
-  - "ME CAGO EN TU PADRE!!\"\xB7$\xB7(=!%/("
+  - TANTO ESFUERZO PARA MOVER LA CAJA PARA NADA
   canActivate: 0
   theNpcSprite: {fileID: 192280644, guid: 7b2df90b8e4d7b44c8d65e8287b9a032, type: 3}
   dialogueActive: 0
   isShop: 0
   isInteractableObj: 1
+  dialoguecanBeActive: 0
 --- !u!114 &722497603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4476,6 +4650,88 @@ Transform:
   - {fileID: 368027418}
   m_Father: {fileID: 900043551}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &970322826
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3308018403335150943, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
+      propertyPath: m_Name
+      value: objetodialogoA (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209851009496166404, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 28.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209851009496166404, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.0140936
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209851009496166404, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209851009496166404, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209851009496166404, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209851009496166404, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209851009496166404, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209851009496166404, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209851009496166404, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209851009496166404, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6077915258627108232, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
+      propertyPath: lines.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6077915258627108232, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
+      propertyPath: lines.Array.data[1]
+      value: "\xA1Reconozco esa piedra!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6077915258627108232, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
+      propertyPath: lines.Array.data[2]
+      value: n-Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6077915258627108232, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
+      propertyPath: lines.Array.data[3]
+      value: "Mi madre me cont\xF3 que si incrustaba el bast\xF3n en el agujero,
+        pasar\xEDan cosas"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6077915258627108232, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
+      propertyPath: lines.Array.data[4]
+      value: n- Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6077915258627108232, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
+      propertyPath: lines.Array.data[5]
+      value: "Pero no me acuerdo de qu\xE9"
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bee52077dde912a49a5a9157c7634c2c, type: 3}
 --- !u!1 &975058964
 GameObject:
   m_ObjectHideFlags: 0
@@ -6743,6 +6999,7 @@ MonoBehaviour:
   dialogueActive: 0
   isShop: 0
   isInteractableObj: 0
+  dialoguecanBeActive: 0
 --- !u!1001 &1749011943
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7619,7 +7876,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2052402319
 Transform:
   m_ObjectHideFlags: 0
@@ -8526,6 +8783,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MenuGameOver
       objectReference: {fileID: 0}
+    - target: {fileID: 98391743834230504, guid: 68ece5558ea77c947a25cc4cbe3ff9cd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2060434051868041560, guid: 68ece5558ea77c947a25cc4cbe3ff9cd, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -9216,3 +9477,6 @@ SceneRoots:
   - {fileID: 1630916034}
   - {fileID: 1980988348}
   - {fileID: 522125880}
+  - {fileID: 299970636}
+  - {fileID: 970322826}
+  - {fileID: 132179599}

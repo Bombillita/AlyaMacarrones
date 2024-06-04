@@ -4025,6 +4025,7 @@ MonoBehaviour:
   dialogueActive: 0
   isShop: 1
   isInteractableObj: 0
+  dialoguecanBeActive: 0
 --- !u!114 &1210231915
 MonoBehaviour:
   m_ObjectHideFlags: 0

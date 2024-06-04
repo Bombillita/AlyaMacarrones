@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4adf5fba3d41203409232c2b7c547c7f, type: 3}
+  m_Name: 4
+  m_EditorClassIdentifier: 
+  storyText: "Siempre podr\xE9 recurrir a convertirme en una profesional de la petanca."
+  nextStates:
+  - {fileID: 11400000, guid: 5dabc37fa6b696042a24cc7cb0d8f34f, type: 2}
+  imagenState: {fileID: 21300000, guid: 3ce2f26a3247bd04d958c4e079a5641b, type: 3}

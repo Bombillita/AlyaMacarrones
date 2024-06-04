@@ -79,21 +79,13 @@ public class DialogueManager : MonoBehaviour
     //Método que muestra el diálogo pasado por parámetro
     public void ShowDialog(string[] newLines, Sprite theSNpc)
     {
-        //El contenido de las líneas de diálogo del Manager pasa a ser el de las líneas de diálogo tras haber activado un diálogo
         dialogLines = newLines;
-        //Vamos a la primera línea de diálogo
         currentLine = 0;
-        //Asignamos el Sprite del NPC
         sNpc = theSNpc;
-        //Comprobamos si hay un cambio de personaje en el diálogo
         CheckIfName(sNpc);
-        //Muestro la línea de diálogo actual
         dialogText.text = dialogLines[currentLine];
-        //Activamos el cuadro de diálogo
         dialogBox.SetActive(true);
-        //El diálogo acaba de empezar
         justStarted = true;
-        //Hacemos que el jugador no se pueda mover
         PlayerC.instance.canMove = false;
 
 
@@ -106,18 +98,12 @@ public class DialogueManager : MonoBehaviour
         //Si la línea empieza por n-
         if (dialogLines[currentLine].StartsWith("n-"))
         {
-            //Obtenemos el nombre del personaje que habla en ese momento
             charName = dialogLines[currentLine].Replace("n-", "");
-            //Si es distinto de los nombres de los personajes principales
             if (charName != "Player")
-                //Ponemos el sprite del npc en concreto
                 portrait.sprite = theSNpc;
-            //Si es el nombre de un personaje principal
             else
-                //Ponemos el sprite de ese personaje
                 portrait.sprite = _pCreference.PlayerSprite;
 
-            //Salto a la siguiente línea de diálogo
             currentLine++;
         }
     }

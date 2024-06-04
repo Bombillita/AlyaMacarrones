@@ -14,6 +14,8 @@ public class DialogActivator : MonoBehaviour
     private PlayerC _pcref;
     public bool isShop = false;
     public bool isInteractableObj = false;
+    public bool dialoguecanBeActive = false;
+    
 
 
     public static DialogActivator instance;
@@ -31,11 +33,13 @@ public class DialogActivator : MonoBehaviour
         //Si el jugador puede activar el diálogo y presiona el botón de interacción y la caja de diálogo no está activa en la jerarquía
         if (canActivate && Input.GetKeyDown(KeyCode.E) && !DialogueManager.instance.dialogBox.activeInHierarchy)
         {
-            _dmRef.isInteractableObj = isInteractableObj;
-            _dmRef.isShop = isShop;
-            DialogueManager.instance.ShowDialog(lines, theNpcSprite);
-            
+            dialoguecanBeActive = true;
         }
+        else
+        {
+            dialoguecanBeActive = false;
+        }
+        
 
         if (DialogueManager.instance.dialogBox.activeInHierarchy)
         {
@@ -48,6 +52,14 @@ public class DialogActivator : MonoBehaviour
             _pcref.enabled = true;
         }
 
+
+        if (dialoguecanBeActive == true)
+        {
+            dialoguecanBeActive = false;
+            _dmRef.isInteractableObj = isInteractableObj;
+            _dmRef.isShop = isShop;
+            DialogueManager.instance.ShowDialog(lines, theNpcSprite);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
