@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
@@ -11,10 +12,11 @@ public class BattleSystem : MonoBehaviour
     public GameObject playerPrefab;
     public GameObject enemytutoPrefab;
     public GameObject enemyPrefab;
-    //private bool isTutorial;
+    private bool isTutorial;
+    public bool isHealing = false;
+    public bool isattacking = false;
 
     public static bool enemydefeated;
-    public static bool playerdead;
 
     public Transform playerbase;
     public Transform enemybase;
@@ -26,13 +28,16 @@ public class BattleSystem : MonoBehaviour
 
     public BattleUI playerUI;
     public BattleUI enemyUI;
-    
+
+    private LevelUIController _uiref;
 
     void Start()
     {
         state = BattleState.START;
+        _uiref = GameObject.Find("Canvasfs").GetComponent<LevelUIController>();
+        _uiref.FadeFromBlack();
         StartCoroutine(SetUpBattle());
-        //CombatOnTrigger.istutorial = isTutorial;
+        CombatOnTrigger.istutorial = isTutorial;
     }
 
     IEnumerator SetUpBattle()
@@ -40,6 +45,8 @@ public class BattleSystem : MonoBehaviour
         GameObject playerGO = Instantiate(playerPrefab, playerbase);
         playerUnit = playerGO.GetComponent<Unit>();
 
+        //GameObject enemyGO = Instantiate(enemyPrefab, enemybase);
+        //enemyUnit = enemyGO.GetComponent<Unit>();
 
         if (CombatOnTrigger.istutorial == true)
         {
@@ -52,38 +59,39 @@ public class BattleSystem : MonoBehaviour
             GameObject enemyGO = Instantiate(enemyPrefab, enemybase);
             enemyUnit = enemyGO.GetComponent<Unit>();
         }
-        
+
 
         Buttons.SetActive(false);
 
 
-        dialogueText.text = "¡Alya y Ony se preparan para luchar contra " + enemyUnit.unitName + "! ¿Qué harán?";
+        dialogueText.text = "¡Alya y Ony se preparan para luchar contra " + enemyUnit.unitName + "!";
 
         playerUI.SetUI(playerUnit);
         enemyUI.SetUI(enemyUnit);
 
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(3f);
 
-        Debug.Log("hola");
         state = BattleState.PLAYERTURN;
         PlayerTurn();
     }
 
     IEnumerator PlayerAttack()
     {
-        //dmg enemigo
         bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
         enemyUI.SetHP(enemyUnit.currentHP);
-        dialogueText.text = "bombazo";
+        dialogueText.text = "¡Ony ataca!";
+        isattacking = true;
 
         yield return new WaitForSeconds(2f);
         if (isDead)
         {
+            isattacking = false;
             state = BattleState.WON;
             EndBattle();
         }
         else
         {
+            isattacking = false;
             state = BattleState.ENEMYTURN;
             StartCoroutine(EnemyTurn());
 
@@ -93,7 +101,7 @@ public class BattleSystem : MonoBehaviour
     void PlayerTurn()
     {
         Buttons.SetActive(true);
-        dialogueText.text = "Ataquen";
+        dialogueText.text = "¿Qué harán?";
     }
     
     IEnumerator EnemyTurn()
@@ -125,16 +133,24 @@ public class BattleSystem : MonoBehaviour
     IEnumerator PlayerHeal()
     {
         playerUnit.Heal(7);
-
         playerUI.SetHP(playerUnit.currentHP);
+        isHealing = true;
+
         dialogueText.text = "Estáis dando volteretas";
 
         yield return new WaitForSeconds(2f);
-
+        isHealing = false;
         state = BattleState.ENEMYTURN;
         StartCoroutine(EnemyTurn());
     }
 
+    IEnumerator ComeBack()
+    {
+        yield return new WaitForSeconds(2f);
+        _uiref.FadeToBlack();
+        yield return new WaitForSeconds(4f);
+        SceneManager.LoadScene("Bosque2");
+    } 
     public void OnAttackButton()
     {
         if (state != BattleState.PLAYERTURN)
@@ -158,18 +174,21 @@ public class BattleSystem : MonoBehaviour
         Buttons.SetActive(false);
         if (state == BattleState.WON)
         {
-            if (CombatOnTrigger.istutorial == true)
+           if (CombatOnTrigger.istutorial == true)
             {
                 CombatOnTrigger.istutorial = false;
             }
 
             dialogueText.text = "¡Lo han conseguido!";
             enemydefeated = true;
+            StartCoroutine(ComeBack());
         }
         else if (state == BattleState.LOST)
         {
-            playerdead = true;
+            
             dialogueText.text = "Han perdido";
+            enemydefeated = false;
+            StartCoroutine(ComeBack());
         }
 
     }
