@@ -12,9 +12,9 @@ public class CombatOnTrigger : MonoBehaviour
     {
         _uiRef = GameObject.Find("Canvas").GetComponent<LevelUIController>();
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
+        if (collision.CompareTag("Player"))
         {
             StartCoroutine(LoadCombat());
         }

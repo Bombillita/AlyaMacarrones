@@ -45,10 +45,13 @@ public class BattleSystem : MonoBehaviour
         GameObject playerGO = Instantiate(playerPrefab, playerbase);
         playerUnit = playerGO.GetComponent<Unit>();
 
+        GameObject enemyGO = Instantiate(enemyPrefab, enemybase);
+        enemyUnit = enemyGO.GetComponent<Unit>();
+
         //GameObject enemyGO = Instantiate(enemyPrefab, enemybase);
         //enemyUnit = enemyGO.GetComponent<Unit>();
 
-        if (CombatOnTrigger.istutorial == true)
+        /*if (CombatOnTrigger.istutorial == true)
         {
             GameObject enemyGO = Instantiate(enemytutoPrefab, enemybase);
             enemyUnit = enemyGO.GetComponent<Unit>();
@@ -58,7 +61,7 @@ public class BattleSystem : MonoBehaviour
         {
             GameObject enemyGO = Instantiate(enemyPrefab, enemybase);
             enemyUnit = enemyGO.GetComponent<Unit>();
-        }
+        }*/
 
 
         Buttons.SetActive(false);
@@ -107,7 +110,7 @@ public class BattleSystem : MonoBehaviour
     IEnumerator EnemyTurn()
     {
         Buttons.SetActive(false);
-        dialogueText.text = enemyUnit.unitName + "ataca";
+        dialogueText.text = enemyUnit.unitName + " ataca";
 
         yield return new WaitForSeconds(1f);
 
@@ -136,7 +139,7 @@ public class BattleSystem : MonoBehaviour
         playerUI.SetHP(playerUnit.currentHP);
         isHealing = true;
 
-        dialogueText.text = "Estáis dando volteretas";
+        dialogueText.text = "Alya cura a Ony";
 
         yield return new WaitForSeconds(2f);
         isHealing = false;
@@ -181,7 +184,7 @@ public class BattleSystem : MonoBehaviour
 
             dialogueText.text = "¡Lo han conseguido!";
             enemydefeated = true;
-            StartCoroutine(ComeBack());
+            SceneManager.LoadScene("Final");
         }
         else if (state == BattleState.LOST)
         {

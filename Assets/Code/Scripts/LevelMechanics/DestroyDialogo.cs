@@ -45,12 +45,15 @@ public class DestroyDialogo : MonoBehaviour
             canActivatea = false;
             dialogueActive = true;
             _pcref.enabled = false;
-            
+            Time.timeScale = 0f;
+
+
         }
         else
         {
             dialogueActive = false;
             _pcref.enabled = true;
+            Time.timeScale = 1f;
         }
 
 

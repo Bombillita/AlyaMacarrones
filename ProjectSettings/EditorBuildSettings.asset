@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Levels/Scenes/CinematicaInicio.unity
     guid: 8d7ae3b967971244587e33781498a0fe
+  - enabled: 1
+    path: Assets/Levels/Scenes/FInal.unity
+    guid: b443cf8376eab134e92c0cb8f34e3ac6
   m_configObjects: {}

@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class GameVisual : MonoBehaviour
 {
+    public bool isend = false;
 
     [SerializeField] TextMeshProUGUI textComponent;
 
@@ -45,8 +46,16 @@ public class GameVisual : MonoBehaviour
 
         if (nextStates.Length == 0)
         {
-            SceneManager.LoadScene("CasaAlya");
+            if (isend == false)
+            {
+                SceneManager.LoadScene("CasaAlya");
                 return;
+            }
+            if (isend == true)
+            {
+                SceneManager.LoadScene("MainMenu");
+                return;
+            }
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {

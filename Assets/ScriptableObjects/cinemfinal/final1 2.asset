@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4adf5fba3d41203409232c2b7c547c7f, type: 3}
+  m_Name: final1 2
+  m_EditorClassIdentifier: 
+  storyText: "Por qu\xE9 acabo de presenciar una pelea contra una rana"
+  nextStates:
+  - {fileID: 11400000, guid: e5b3d5a7510e14e46a740ab857e47ad5, type: 2}
+  imagenState: {fileID: 21300000, guid: a4a5bca3344551a42aba32fc40e61962, type: 3}
